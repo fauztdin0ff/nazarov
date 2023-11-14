@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<script defer src="js/script.js"></script>
+	<title>Медицинский центр Алексея Назарова</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="header__body container">
+				<div class="header__logo">
+					<a href=""><img src="images/brand-logo.png" alt="logo"></a>
+				</div>
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="" class="menu__link active">Главная</a></li>
+							<li><a href="" class="menu__link">О нас</a></li>
+							<li class="menu__item-with-submenu">
+								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Услуги
+									<span class="arrow" id="arrow1">
+										<svg width="15px" height="15px" viewBox="0 0 5 9">
+											<path
+												d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+										</svg>
+									</span>
+								</a>
+								<ul class="submenu" id="submenu1">
+									<li><a href="" class="submenu__link">Услуга 1</a></li>
+									<li><a href="" class="submenu__link">Услуга 2</a></li>
+								</ul>
+							</li>
+							<li class="menu__item-with-submenu">
+								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Подробнее
+									<span class="arrow" id="arrow2">
+										<svg width="15px" height="15px" viewBox="0 0 5 9">
+											<path
+												d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+										</svg>
+									</span>
+								</a>
+								<ul class="submenu" id="submenu2">
+									<li><a href="" class="submenu__link">Подробнее 1</a></li>
+									<li><a href="" class="submenu__link">Подробнее 2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+
+				</div>
+				<div class="header__buttons buttons-header">
+					<div class="buttons-header__tel">
+						<a href="te:+998901234567">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+								viewBox="0 0 16 16">
+								<path
+									d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+							</svg>
+							+998 90 123 45 67
+						</a>
+					</div>
+					<div class="buttons-header__btn">
+						<a href="">Записаться</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
