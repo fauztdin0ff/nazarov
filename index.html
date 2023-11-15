@@ -17,7 +17,7 @@
 		<div class="header">
 			<div class="header__body container">
 				<div class="header__logo">
-					<a href=""><img src="images/brand-logo.png" alt="logo"></a>
+					<a href=""><img src="images/logo.png" alt="logo"></a>
 				</div>
 				<div class="header__menu menu">
 					<div class="menu__icon">
@@ -26,9 +26,10 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li><a href="" class="menu__link active">Главная</a></li>
-							<li><a href="" class="menu__link">О нас</a></li>
+
 							<li class="menu__item-with-submenu">
-								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Услуги
+								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Методы
+									терапии
 									<span class="arrow" id="arrow1">
 										<svg width="15px" height="15px" viewBox="0 0 5 9">
 											<path
@@ -37,12 +38,32 @@
 									</span>
 								</a>
 								<ul class="submenu" id="submenu1">
-									<li><a href="" class="submenu__link">Услуга 1</a></li>
-									<li><a href="" class="submenu__link">Услуга 2</a></li>
+									<li><a href="" class="submenu__link">Биорезонансная <br> рефлексодиагностика</a></li>
+									<li><a href="" class="submenu__link">Мануальная терапия</a></li>
+									<li><a href="" class="submenu__link">Тракционная терапия</a></li>
+									<li><a href="" class="submenu__link">Все методы</a></li>
+								</ul>
+							</li>
+							<li><a href="" class="menu__link">Прайс-лист</a></li>
+							<li class="menu__item-with-submenu">
+								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu3', 'arrow3')">О нас
+									<span class="arrow" id="arrow3">
+										<svg width="15px" height="15px" viewBox="0 0 5 9">
+											<path
+												d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+										</svg>
+									</span>
+								</a>
+								<ul class="submenu" id="submenu3">
+									<li><a href="" class="submenu__link">О центре</a></li>
+									<li><a href="" class="submenu__link">Сертификаты</a></li>
+									<li><a href="" class="submenu__link">Грамоты</a></li>
+									<li><a href="" class="submenu__link">Команда</a></li>
+									<li><a href="" class="submenu__link">Контакты</a></li>
 								</ul>
 							</li>
 							<li class="menu__item-with-submenu">
-								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Подробнее
+								<a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Пресс-центр
 									<span class="arrow" id="arrow2">
 										<svg width="15px" height="15px" viewBox="0 0 5 9">
 											<path
@@ -51,8 +72,10 @@
 									</span>
 								</a>
 								<ul class="submenu" id="submenu2">
-									<li><a href="" class="submenu__link">Подробнее 1</a></li>
-									<li><a href="" class="submenu__link">Подробнее 2</a></li>
+									<li><a href="" class="submenu__link">Пресса о нас</a></li>
+									<li><a href="" class="submenu__link">Новости</a></li>
+									<li><a href="" class="submenu__link">Статьи</a></li>
+									<li><a href="" class="submenu__link">Фотогалерея</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -71,11 +94,200 @@
 						</a>
 					</div>
 					<div class="buttons-header__btn">
-						<a href="">Записаться</a>
+						<a href="">Записаться <span class="plus-icon">+</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<main class="main">
+			<section class="home">
+				<div class="home__body container">
+					<div class="home__text">
+						<div class="home__subtitle">
+							<h1>Медицинский центр имени Алексея Назарова</h1>
+						</div>
+						<div class="home__title">
+							<h2>Здоровый позвоночник - долгая жизнь</h2>
+						</div>
+						<div class="home__buttons">
+							<div class="blue-button">
+								<a href="">Записаться <span class="plus-icon">+</span></a>
+							</div>
+							<div class="white-button">
+								<a href="">Контакты</a>
+							</div>
+						</div>
+					</div>
+					<div class="home__image">
+						<img src="images/home/doctor-3.png" alt="dr">
+						<div class="image-info">
+							<div class="image-info__block">
+								<p><span>10</span>лучших специалистов</p>
+							</div>
+							<div class="image-info__block">
+								<p><span>100+</span>довольных клиентов</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="homeinfo">
+					<div class="homeinfo__body container">
+						<div class="homeinfo__block">
+							<div class="homeinfo__icon">
+								<img src="images/home/benefits-1.png" alt="icon">
+							</div>
+							<div class="homeinfo__title">
+								<h3>Лучшие доктора</h3>
+							</div>
+							<div class="homeinfo__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+							</div>
+						</div>
+						<div class="homeinfo__block">
+							<div class="homeinfo__icon">
+								<img src="images/home/benefits-2.png" alt="icon">
+							</div>
+							<div class="homeinfo__title">
+								<h3>Своя методика</h3>
+							</div>
+							<div class="homeinfo__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+							</div>
+						</div>
+						<div class="homeinfo__block">
+							<div class="homeinfo__icon">
+								<img src="images/home/benefits-3.png" alt="icon">
+							</div>
+							<div class="homeinfo__title">
+								<h3>24/7 поддержка</h3>
+							</div>
+							<div class="homeinfo__text">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__body container">
+					<div class="about__info">
+						<div class="about__text">
+							<div class="about__title title">
+								<h4>О нас</h4>
+							</div>
+							<div class="about__subtitle">
+								<h5>Добро пожаловать в Центр А. Назарова</h5>
+							</div>
+							<div class="about__div">
+								<p>«АНИК» — одна из первых частных фирм Узбекистана, которая предложила в 1993
+									году альтернативные медицинские услуги больным с различными нарушениями опорно-двигательной
+									системы. Основатель и руководитель — Алексей Константинович Назаров</p>
+							</div>
+						</div>
+						<div class="about__cards">
+							<div class="about__card">
+								<div class="about__card-title">Достоинства</div>
+								<div class="about__card-text">Это весьма известное в Узбекистане и за его пределами, медицинское
+									учреждение!</div>
+							</div>
+							<div class="about__card">
+								<div class="about__card-title">Качество</div>
+								<div class="about__card-text">Признаны лидером в лечении заболеваний опорно-двигательной
+									системы!</div>
+							</div>
+						</div>
+					</div>
+					<div class="about__image">
+						<img src="images/home/about-img.png" alt="cabinet">
+					</div>
+					<div class="more-btn blue-button">
+						<a href="">Подробнее...</a>
+					</div>
+				</div>
+			</section>
+			<section class="services">
+				<div class="services__body container">
+					<div class="services__title title">
+						<h4>Услуги</h4>
+					</div>
+					<div class="services__subtitle">
+						<p>Методы терапии</p>
+					</div>
+					<div class="services__blocks">
+
+						<div class="services__block block-service">
+							<div class="block-service__info">
+								<div class="block-service__icon">
+									<img src="images/services/service-6.png" alt="service">
+								</div>
+								<div class="block-service__title">
+									<h6>Биорезонансная рефлексодиагностика</h6>
+								</div>
+								<div class="block-service__text">
+									<p>Электропунктурная диагностика и терапия, биофункциональная диагностика,
+										биорезонансная терапия и другие направления</p>
+								</div>
+							</div>
+							<div class="block-service__buttons">
+								<div class="blue-button">
+									<a href="">Заказать</a>
+								</div>
+								<div class="white-button">
+									<a href="">Подробнее ></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="services__block block-service">
+							<div class="block-service__info">
+								<div class="block-service__icon">
+									<img src="images/services/service-2.png" alt="service">
+								</div>
+								<div class="block-service__title">
+									<h6>Мануальная <br> терапия</h6>
+								</div>
+								<div class="block-service__text">
+									<p>Воздействие руками на болезненный очаг: орган, сустав, позвоночник, часть тела. Метод
+										насчитывает более 1000 приемов</p>
+								</div>
+							</div>
+							<div class="block-service__buttons">
+								<div class="blue-button">
+									<a href="">Заказать</a>
+								</div>
+								<div class="white-button">
+									<a href="">Подробнее ></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="services__block block-service">
+							<div class="block-service__info">
+								<div class="block-service__icon">
+									<img src="images/services/service-4.png" alt="service">
+								</div>
+								<div class="block-service__title">
+									<h6>Тракционная <br> терапия</h6>
+								</div>
+								<div class="block-service__text">
+									<p>При лечении различных заболеваний позвоночника широко используется метод тракционной
+										терапии – вытяжение позвоночника</p>
+								</div>
+							</div>
+							<div class="block-service__buttons">
+								<div class="blue-button">
+									<a href="">Заказать</a>
+								</div>
+								<div class="white-button">
+									<a href="">Подробнее ></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</main>
 	</div>
 </body>
 
