@@ -718,6 +718,11 @@ main {
 /*--------------------------------------------ABOUT---------------------------------------------*/
 .about {
 	padding: 100px 0;
+	@media (max-width: 650px) {
+		& {
+			padding: 40px 0;
+		}
+	}
 	&__body {
 		display: flex;
 		align-items: center;
@@ -837,6 +842,11 @@ main {
 .services {
 	padding: 100px 0;
 	background-color: #f8f8ff;
+	@media (max-width: 650px) {
+		& {
+			padding: 100px 0px 40px 0px;
+		}
+	}
 	&__body {
 	}
 
@@ -956,6 +966,11 @@ main {
 /*--------------------------------------------TEAM---------------------------------------------*/
 .team {
 	padding: 100px 0;
+	@media (max-width: 650px) {
+		& {
+			padding: 20px 0;
+		}
+	}
 	&__body {
 	}
 
@@ -1283,6 +1298,111 @@ main {
 				a {
 					padding: 7px 10px;
 				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------FOOTER---------------------------------------------*/
+footer {
+	margin-top: 150px;
+	background-color: #dbe4fc;
+	overflow: hidden;
+	@media (max-width: 650px) {
+		& {
+			margin-top: 70px;
+		}
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+.footer-main {
+	padding: 30px 0;
+	&__body {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 50px;
+		@media (max-width: 600px) {
+			& {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__menu {
+		@media (max-width: 600px) {
+			& {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__logo {
+	}
+
+	&__title {
+		margin-bottom: 25px;
+	}
+
+	&__list {
+		max-width: 500px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+		li:not(:last-child) {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__link {
+		color: $darkGrey;
+	}
+
+	&__address {
+		@media (max-width: 600px) {
+			& {
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+		p {
+			margin-bottom: 15px;
+			img {
+				margin-right: 10px;
+			}
+		}
+		a {
+			color: $darkGrey;
+		}
+	}
+}
+
+.footer-bottom {
+	padding: 15px 0;
+	background-color: $blue;
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		color: #fff;
+		@include adaptiv-value("font-size", 16, 12, 1);
+		@media (max-width: 600px) {
+			& {
+				flex-direction: column;
+			}
+		}
+		& > * {
+			flex: 0 1 33.3%;
+		}
+	}
+	&__logo {
+		@media (max-width: 767px) {
+			& {
+				display: none;
 			}
 		}
 	}
