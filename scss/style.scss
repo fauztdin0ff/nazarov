@@ -462,6 +462,11 @@ main {
 		min-height: 100vh;
 		position: relative;
 		z-index: 3;
+		@media (max-width: 450px) {
+			& {
+				min-height: 90vh;
+			}
+		}
 		&::before,
 		&::after {
 			content: "";
@@ -511,7 +516,7 @@ main {
 		@media (max-width: 800px) {
 			& {
 				flex-direction: column;
-				padding: 100px 0 40px 0;
+				padding: 100px 0 0px 0;
 			}
 		}
 	}
@@ -531,10 +536,17 @@ main {
 		@include adaptiv-value("font-size", 50, 22, 1);
 		color: $darkGrey;
 		margin-bottom: 50px;
-		line-height: 120%;
+		line-height: 130%;
 		letter-spacing: -1.22px;
 		font-weight: 700;
 		font-style: normal;
+		@media (max-width: 475px) {
+			& {
+				text-align: center;
+				margin-bottom: 0px;
+				margin-top: 15px;
+			}
+		}
 	}
 
 	&__subtitle {
@@ -544,6 +556,11 @@ main {
 		@media (max-width: 600px) {
 			& {
 				margin-bottom: 25px;
+			}
+		}
+		@media (max-width: 475px) {
+			& {
+				text-align: center;
 			}
 		}
 	}
@@ -565,6 +582,7 @@ main {
 		@media (max-width: 600px) {
 			& {
 				justify-content: center;
+				display: none;
 			}
 		}
 	}
@@ -848,6 +866,11 @@ main {
 		}
 	}
 	&__body {
+		@media (max-width: 450px) {
+			& {
+				padding: 0px 30px;
+			}
+		}
 	}
 
 	&__title {
