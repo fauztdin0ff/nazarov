@@ -1748,6 +1748,11 @@ footer a:hover {
   flex: 0 1 30%;
   padding-left: 30px;
 }
+@media (max-width: 1000px) {
+  .biorezonansnaya-diagnostika__sidebar {
+    padding-left: 0;
+  }
+}
 
 .sidebar {
   text-align: center;
