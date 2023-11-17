@@ -1816,3 +1816,148 @@ footer a:hover {
   grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   gap: 10px;
 }
+
+/*------------------------------------------PRICE PAGE-----------------------------------------------*/
+.price-page {
+  position: relative;
+}
+.price-page::before, .price-page::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #9bb3fb;
+  border-radius: 50%;
+  z-index: 0;
+}
+.price-page::before {
+  bottom: -80px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  filter: blur(60px);
+  opacity: 0.8;
+}
+@media (max-width: 600px) {
+  .price-page::before {
+    width: 100px;
+    height: 100px;
+  }
+}
+.price-page::after {
+  top: 10%;
+  right: -300px;
+  width: 400px;
+  height: 600px;
+  filter: blur(60px);
+  opacity: 0.5;
+}
+@media (max-width: 600px) {
+  .price-page::after {
+    right: -100px;
+    width: 200px;
+    height: 300px;
+    opacity: 0.2;
+  }
+}
+.price-page__body {
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .price-page__body {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .price-page__body .biorezonansnaya-diagnostika__sidebar {
+    display: none;
+  }
+}
+
+.price__subtitle {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .price__subtitle {
+    font-size: calc(18px + 9 * ((100vw - 320px) / 880));
+  }
+}
+.price__content {
+  border-radius: 30px;
+  padding: 0 45px 45px 45px;
+}
+@media (max-width: 550px) {
+  .price__content {
+    padding: 0 20px 20px;
+  }
+}
+@media (max-width: 450px) {
+  .price__content {
+    padding: 0 10px 10px;
+  }
+}
+.price__content-table {
+  position: relative;
+  z-index: 9;
+}
+
+.table-price {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  padding: 48px 24px;
+  color: #000;
+  border-radius: 25px;
+}
+@media (max-width: 550px) {
+  .table-price {
+    padding: 24px 12px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .table-price {
+    padding: 12px 8px;
+  }
+}
+.table-price__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.table-price__col {
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.table-price__value li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px 7px 10px;
+  gap: 5px;
+  border-bottom: 1px solid #9bb3fb;
+  color: #7a7f85;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .table-price__value li {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 880));
+  }
+}
+.table-price__value li:hover {
+  background-color: #dde4fb;
+  cursor: pointer;
+}
+.table-price__value span {
+  display: inline-block;
+  white-space: nowrap;
+  color: #4169e1;
+  font-weight: 700;
+}

@@ -1727,5 +1727,146 @@ footer {
 	grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 	gap: 10px;
 }
-.gallery-item {
+
+/*------------------------------------------PRICE PAGE-----------------------------------------------*/
+.price-page {
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		background-color: $lightBlue;
+		border-radius: 50%;
+		z-index: 0;
+	}
+	&::before {
+		bottom: -80px;
+		left: -100px;
+		width: 300px;
+		height: 300px;
+		filter: blur(60px);
+		opacity: 0.8;
+		@media (max-width: 600px) {
+			& {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+	&::after {
+		top: 10%;
+		right: -300px;
+		width: 400px;
+		height: 600px;
+		filter: blur(60px);
+		opacity: 0.5;
+		@media (max-width: 600px) {
+			& {
+				right: -100px;
+				width: 200px;
+				height: 300px;
+				opacity: 0.2;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		@media (max-width: 1000px) {
+			& {
+				flex-direction: column;
+				gap: 40px;
+			}
+		}
+
+		.biorezonansnaya-diagnostika__sidebar {
+			@media (max-width: 650px) {
+				& {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.price {
+	&__subtitle {
+		@include adaptiv-value("font-size", 27, 18, 1);
+		margin-bottom: 30px;
+	}
+
+	&__content {
+		border-radius: 30px;
+		padding: 0 45px 45px 45px;
+		@media (max-width: 550px) {
+			& {
+				padding: 0 20px 20px;
+			}
+		}
+		@media (max-width: 450px) {
+			& {
+				padding: 0 10px 10px;
+			}
+		}
+	}
+
+	&__content-table {
+		position: relative;
+		z-index: 9;
+	}
+}
+.table-price {
+	background: rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+	backdrop-filter: blur(50px);
+	padding: 48px 24px;
+	color: #000;
+	border-radius: 25px;
+	@media (max-width: 550px) {
+		& {
+			padding: 24px 12px;
+			border-radius: 10px;
+		}
+	}
+	@media (max-width: 450px) {
+		& {
+			padding: 12px 8px;
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 25px;
+	}
+
+	&__col {
+		padding: 16px;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+		backdrop-filter: blur(25px);
+	}
+
+	&__value {
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 7px 10px 7px 10px;
+			gap: 5px;
+			border-bottom: 1px solid $lightBlue;
+			color: $lightGrey;
+			@include adaptiv-value("font-size", 16, 12, 1);
+			&:hover {
+				background-color: #dde4fb;
+				cursor: pointer;
+			}
+		}
+		span {
+			display: inline-block;
+			white-space: nowrap;
+			color: $blue;
+			font-weight: 700;
+		}
+	}
 }
