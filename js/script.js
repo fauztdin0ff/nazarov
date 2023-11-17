@@ -53,3 +53,19 @@ function toggleSubmenu(event, submenuId, arrowId) {
       arrow.classList.toggle("rotated");
    }
 }
+
+/*--------------------------------------------Gallery sidebar---------------------------------------------*/
+const galleries = document.querySelectorAll('.lightgallery-int');
+
+// Проходим через каждый элемент галереи и инициализируем его
+galleries.forEach(function (gallery) {
+   lightGallery(gallery, {
+      plugins: [lgZoom],
+      speed: 500,
+      download: false,
+      closeOnTap: true,
+      loop: false,
+      hideControlOnEnd: true,
+      alignThumbnails: 'middle',
+   });
+});

@@ -1542,6 +1542,11 @@ footer a:hover {
 .services-page .services__blocks {
   flex-direction: column;
 }
+@media (max-width: 650px) {
+  .services-page .services__blocks {
+    padding: 0 20px;
+  }
+}
 .services-page .services__block {
   flex: 1 1 auto;
   margin-bottom: 40px;
@@ -1704,4 +1709,105 @@ footer a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 30px;
+}
+
+/*------------------------------------------diagnostika-----------------------------------------------*/
+.biorezonansnaya-diagnostika {
+  padding: 40px 0;
+}
+.biorezonansnaya-diagnostika__body {
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .biorezonansnaya-diagnostika__body {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.biorezonansnaya-diagnostika__content {
+  flex: 0 1 70%;
+  padding: 25px 35px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 2px 1px 5px 0px rgba(0, 22, 86, 0.06), 8px 4px 9px 0px rgba(0, 22, 86, 0.05), 17px 9px 12px 0px rgba(0, 22, 86, 0.03), 31px 15px 14px 0px rgba(0, 22, 86, 0.01), 49px 24px 15px 0px rgba(0, 22, 86, 0);
+}
+.biorezonansnaya-diagnostika__title {
+  font-size: 20px;
+  color: #4169e1;
+  margin-bottom: 25px;
+}
+@media (max-width: 1200px) {
+  .biorezonansnaya-diagnostika__title {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 880));
+  }
+}
+.biorezonansnaya-diagnostika__text p {
+  margin-bottom: 15px;
+}
+.biorezonansnaya-diagnostika__sidebar {
+  flex: 0 1 30%;
+  padding-left: 30px;
+}
+
+.sidebar {
+  text-align: center;
+}
+.sidebar__price {
+  margin-bottom: 40px;
+}
+.sidebar__price-table {
+  padding: 10px 18px;
+  background: #9bb3fb;
+  border-radius: 20px;
+  color: #fff;
+}
+.sidebar__price-table li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-weight: 300;
+}
+.sidebar__price-table span {
+  display: inline-block;
+}
+.sidebar__price-table p {
+  padding: 6px 16px;
+  display: inline-block;
+  border-radius: 20px;
+  color: #4169e1;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  margin-bottom: 12px;
+}
+
+.image-in-text {
+  margin: 25px 0;
+  text-align: center;
+}
+.image-in-text img {
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.sidebar__today p {
+  margin-bottom: 20px;
+}
+.sidebar__gallery img {
+  border-radius: 10px;
+}
+.sidebar__nazart {
+  margin-top: 50px;
+  padding: 0 25px;
+}
+.sidebar__nazart img {
+  max-width: 100%;
+}
+
+.lightgallery-int {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 10px;
 }
