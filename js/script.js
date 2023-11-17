@@ -55,17 +55,75 @@ function toggleSubmenu(event, submenuId, arrowId) {
 }
 
 /*--------------------------------------------Gallery sidebar---------------------------------------------*/
-const galleries = document.querySelectorAll('.lightgallery-int');
+document.addEventListener('DOMContentLoaded', function () {
+   const galleries = document.querySelectorAll('.lightgallery-int');
 
-// Проходим через каждый элемент галереи и инициализируем его
-galleries.forEach(function (gallery) {
-   lightGallery(gallery, {
-      plugins: [lgZoom],
-      speed: 500,
-      download: false,
-      closeOnTap: true,
-      loop: false,
-      hideControlOnEnd: true,
-      alignThumbnails: 'middle',
-   });
+   // Проверяем, есть ли галереи на странице
+   if (galleries.length > 0) {
+      galleries.forEach(function (gallery) {
+         lightGallery(gallery, {
+            plugins: [lgZoom],
+            speed: 500,
+            download: false,
+            closeOnTap: true,
+            loop: false,
+            hideControlOnEnd: true,
+            alignThumbnails: 'middle',
+         });
+      });
+   } else {
+   }
 });
+
+/*--------------------------------------------Animation text---------------------------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   setTimeout(function () {
+      let text = document.getElementById('text');
+
+      if (text) {
+         let originalText = text.innerHTML;
+         text.innerHTML = '';
+
+         function typeText(index) {
+            text.innerHTML = originalText.substr(0, index);
+            if (index < originalText.length) {
+               setTimeout(function () {
+                  typeText(index + 1);
+               }, 100); // Скорость печати (в миллисекундах)
+            }
+         }
+
+         typeText(0);
+      }
+   }, 100); // Задержка в 1 секунду перед запуском
+});
+
+//-------------------------------Прелоадер и плавное появление блоков---------------------------------
+if (document.readyState === "complete") {
+   init();
+} else {
+   window.addEventListener("load", init);
+}
+
+function init() {
+   let preloader = document.querySelector('.preloader');
+   if (preloader) {
+      preloader.classList.add('hide-preloader');
+      preloader.classList.add('hidden-preloader');
+   }
+
+   //плавное появление
+   function onEntry(entry) {
+      entry.forEach(change => {
+         if (change.isIntersecting) {
+            change.target.classList.add('element-show');
+         }
+      });
+   }
+   let options = { threshold: [0.1] };
+   let observer = new IntersectionObserver(onEntry, options);
+   let elements = document.querySelectorAll('.element-animation');
+   for (let elm of elements) {
+      observer.observe(elm);
+   };
+}

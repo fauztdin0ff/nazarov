@@ -82,6 +82,51 @@ main {
   margin-inline: auto;
 }
 
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: #9bb3fb;
+  overflow: hidden;
+}
+.preloader::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #9bb3fb;
+  -webkit-animation: preloaderHide 7s ease 0s;
+          animation: preloaderHide 7s ease 0s;
+}
+.preloader svg {
+  width: 200px;
+}
+
+@-webkit-keyframes preloaderHide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+@keyframes preloaderHide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
 .header {
   position: relative;
   z-index: 10;
@@ -575,6 +620,11 @@ main {
     padding-right: calc(10px + 10 * ((100vw - 320px) / 880));
   }
 }
+@media (max-width: 600px) {
+  .home__text {
+    flex-direction: column-reverse;
+  }
+}
 .home__title {
   font-size: 50px;
   color: #243238;
@@ -592,7 +642,7 @@ main {
 @media (max-width: 475px) {
   .home__title {
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 25px;
     margin-top: 15px;
   }
 }
@@ -608,7 +658,7 @@ main {
 }
 @media (max-width: 600px) {
   .home__subtitle {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 475px) {
@@ -667,6 +717,15 @@ main {
     top: calc(50px + 50 * ((100vw - 320px) / 880));
   }
 }
+.image-info.element-animation {
+  transition: all 0.3s linear 0.4s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.image-info.element-animation.element-show {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .image-info__block {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.3);
@@ -719,6 +778,27 @@ main {
   }
 }
 
+#text {
+  overflow: hidden;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /*-----------------------------------------homeinfo------------------------------------------------*/
 .homeinfo {
   padding: 40px 0;
@@ -752,6 +832,15 @@ main {
   color: #fff;
   border-radius: 20px;
   padding: 33px 24px 34px 60px;
+}
+.homeinfo__block.element-animation {
+  transition: all 0.3s linear 0.4s;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.homeinfo__block.element-animation.element-show {
+  opacity: 1;
+  transform: translateY(0px);
 }
 @media (max-width: 900px) {
   .homeinfo__block {
@@ -845,6 +934,15 @@ main {
 .about__subtitle {
   margin-bottom: 16px;
 }
+.about__subtitle.element-animation {
+  transition: all 0.3s linear 0.4s;
+  opacity: 0;
+  transform: translateX(150px);
+}
+.about__subtitle.element-animation.element-show {
+  opacity: 1;
+  transform: translateX(0px);
+}
 .about__subtitle h5 {
   font-weight: 500;
   font-style: normal;
@@ -870,6 +968,15 @@ main {
   .about__div {
     font-size: calc(14px + 2 * ((100vw - 320px) / 880));
   }
+}
+.about__div.element-animation {
+  transition: all 0.5s linear 0.4s;
+  opacity: 0;
+  transform: translateX(150px);
+}
+.about__div.element-animation.element-show {
+  opacity: 1;
+  transform: translateX(0px);
 }
 .about__cards {
   display: flex;
@@ -1136,6 +1243,15 @@ main {
 .block-team__photo {
   margin-bottom: 25px;
 }
+.block-team__photo.element-animation {
+  transition: all 0.3s linear 0.4s;
+  transform: scale(0.5);
+  opacity: 0;
+}
+.block-team__photo.element-animation.element-show {
+  transform: scale(1);
+  opacity: 1;
+}
 .block-team__photo img {
   max-width: 100%;
 }
@@ -1161,9 +1277,53 @@ main {
 }
 
 /*--------------------------------------------HOME CONTACT---------------------------------------------*/
+@-webkit-keyframes telVibr {
+  0% {
+    transform: rotate(25deg);
+  }
+  15% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-27deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes telVibr {
+  0% {
+    transform: rotate(25deg);
+  }
+  15% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-27deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
 .telephone {
   position: relative;
   overflow: hidden;
+}
+.telephone .svg-tel-icon.element-animation.element-show {
+  -webkit-animation: telVibr 1s linear 0s;
+          animation: telVibr 1s linear 0s;
 }
 .telephone::after {
   content: "";
@@ -1199,6 +1359,7 @@ main {
 @media (max-width: 650px) {
   .telephone__body {
     border-radius: 30px;
+    margin-top: 50px;
   }
 }
 .telephone__info {
@@ -1717,11 +1878,32 @@ footer a:hover {
 }
 .biorezonansnaya-diagnostika__body {
   display: flex;
+  position: relative;
 }
 @media (max-width: 1000px) {
   .biorezonansnaya-diagnostika__body {
     flex-direction: column;
     gap: 50px;
+  }
+}
+.biorezonansnaya-diagnostika__icon {
+  width: 150px;
+  height: 150px;
+  margin: -75px auto 0px auto;
+  padding: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.biorezonansnaya-diagnostika__icon img {
+  width: 100%;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .biorezonansnaya-diagnostika__icon {
+    margin: 0 auto;
   }
 }
 .biorezonansnaya-diagnostika__content {
@@ -1735,6 +1917,7 @@ footer a:hover {
   font-size: 20px;
   color: #4169e1;
   margin-bottom: 25px;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .biorezonansnaya-diagnostika__title {
@@ -1869,7 +2052,7 @@ footer a:hover {
   }
 }
 @media (max-width: 650px) {
-  .price-page__body .biorezonansnaya-diagnostika__sidebar {
+  .price-page__body .sidebar__price {
     display: none;
   }
 }

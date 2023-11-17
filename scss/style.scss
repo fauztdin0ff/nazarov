@@ -65,7 +65,40 @@ main {
 	width: min(100% - 1rem, 1200px);
 	margin-inline: auto;
 }
-
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	background-color: $lightBlue;
+	overflow: hidden;
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		background-color: $lightBlue;
+		animation: preloaderHide 7s ease 0s;
+	}
+	svg {
+		width: 200px;
+	}
+}
+@keyframes preloaderHide {
+	0% {
+		right: 0;
+	}
+	100% {
+		right: -100%;
+	}
+}
 //----------------------------------------------Header----------------------------------------------
 .header {
 	position: relative;
@@ -530,6 +563,11 @@ main {
 		flex-direction: column;
 		justify-content: center;
 		margin-top: -50px;
+		@media (max-width: 600px) {
+			& {
+				flex-direction: column-reverse;
+			}
+		}
 	}
 
 	&__title {
@@ -543,7 +581,7 @@ main {
 		@media (max-width: 475px) {
 			& {
 				text-align: center;
-				margin-bottom: 0px;
+				margin-bottom: 25px;
 				margin-top: 15px;
 			}
 		}
@@ -555,7 +593,7 @@ main {
 		margin-bottom: 15px;
 		@media (max-width: 600px) {
 			& {
-				margin-bottom: 25px;
+				margin-bottom: 15px;
 			}
 		}
 		@media (max-width: 475px) {
@@ -612,6 +650,15 @@ main {
 	bottom: 0;
 	@include adaptiv-value("top", 100, 50, 1);
 	left: 0;
+	&.element-animation {
+		transition: all 0.3s linear 0.4s;
+		opacity: 0;
+		transform: translateY(20px);
+		&.element-show {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
 	&__block {
 		border-radius: 20px;
 		background: rgba(255, 255, 255, 0.3);
@@ -643,7 +690,18 @@ main {
 		}
 	}
 }
+#text {
+	overflow: hidden;
+}
 
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
 /*-----------------------------------------homeinfo------------------------------------------------*/
 .homeinfo {
 	padding: 40px 0;
@@ -677,6 +735,16 @@ main {
 		color: #fff;
 		border-radius: 20px;
 		padding: 33px 24px 34px 60px;
+
+		&.element-animation {
+			transition: all 0.3s linear 0.4s;
+			transform: translateY(20px);
+			opacity: 0;
+			&.element-show {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
 		@media (max-width: 900px) {
 			& {
 				flex: 1 1 auto;
@@ -770,6 +838,16 @@ main {
 	}
 	&__subtitle {
 		margin-bottom: 16px;
+
+		&.element-animation {
+			transition: all 0.3s linear 0.4s;
+			opacity: 0;
+			transform: translateX(150px);
+			&.element-show {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
 		h5 {
 			font-weight: 500;
 			font-style: normal;
@@ -787,6 +865,15 @@ main {
 		letter-spacing: 0.32px;
 		color: #7a7f85;
 		margin-bottom: 32px;
+		&.element-animation {
+			transition: all 0.5s linear 0.4s;
+			opacity: 0;
+			transform: translateX(150px);
+			&.element-show {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
 	}
 
 	&__cards {
@@ -1044,6 +1131,15 @@ main {
 .block-team {
 	&__photo {
 		margin-bottom: 25px;
+		&.element-animation {
+			transition: all 0.3s linear 0.4s;
+			transform: scale(0.5);
+			opacity: 0;
+			&.element-show {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
 		img {
 			max-width: 100%;
 		}
@@ -1068,9 +1164,37 @@ main {
 }
 
 /*--------------------------------------------HOME CONTACT---------------------------------------------*/
+@keyframes telVibr {
+	0% {
+		transform: rotate(25deg);
+	}
+	15% {
+		transform: rotate(-20deg);
+	}
+	25% {
+		transform: rotate(30deg);
+	}
+	50% {
+		transform: rotate(-27deg);
+	}
+	75% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(-12deg);
+	}
+}
 .telephone {
 	position: relative;
 	overflow: hidden;
+
+	.svg-tel-icon {
+		&.element-animation {
+			&.element-show {
+				animation: telVibr 1s linear 0s;
+			}
+		}
+	}
 	&::after {
 		content: "";
 		display: block;
@@ -1104,6 +1228,7 @@ main {
 		@media (max-width: 650px) {
 			& {
 				border-radius: 30px;
+				margin-top: 50px;
 			}
 		}
 	}
@@ -1616,6 +1741,7 @@ footer {
 	padding: 40px 0;
 	&__body {
 		display: flex;
+		position: relative;
 		@media (max-width: 1000px) {
 			& {
 				flex-direction: column;
@@ -1623,7 +1749,25 @@ footer {
 			}
 		}
 	}
-
+	&__icon {
+		width: 150px;
+		height: 150px;
+		margin: -75px auto 0px auto;
+		padding: 15px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+		backdrop-filter: blur(25px);
+		img {
+			width: 100%;
+			border-radius: 50%;
+		}
+		@media (min-width: 768px) {
+			& {
+				margin: 0 auto;
+			}
+		}
+	}
 	&__content {
 		flex: 0 1 70%;
 		padding: 25px 35px;
@@ -1638,6 +1782,7 @@ footer {
 		@include adaptiv-value("font-size", 20, 16, 1);
 		color: $blue;
 		margin-bottom: 25px;
+		text-align: center;
 	}
 
 	&__text {
@@ -1779,7 +1924,7 @@ footer {
 			}
 		}
 
-		.biorezonansnaya-diagnostika__sidebar {
+		.sidebar__price {
 			@media (max-width: 650px) {
 				& {
 					display: none;
