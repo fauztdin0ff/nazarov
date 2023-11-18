@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Методы терапии в центре Алексея Назарова</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="header">
+         <div class="header__body container">
+            <div class="header__logo">
+               <a href=""><img src="../images/logo.png" alt="logo"></a>
+            </div>
+            <div class="header__menu menu">
+               <div class="menu__icon">
+                  <span></span>
+               </div>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="../index.html" class="menu__link active">Главная</a></li>
+
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Методы
+                           терапии
+                           <span class="arrow" id="arrow1">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu1">
+                           <li><a href="biorezonansnaya-diagnostika.html" class="submenu__link">Биорезонансная <br>
+                                 рефлексодиагностика</a></li>
+                           <li><a href="manualnaya-terapiya.html" class="submenu__link">Мануальная терапия</a></li>
+                           <li><a href="trakcionnaya-terapiya.html" class="submenu__link">Тракционная терапия</a></li>
+                           <li><a href="#" class="submenu__link">Все методы</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="../price/" class="menu__link">Прайс-лист</a></li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu3', 'arrow3')">О нас
+                           <span class="arrow" id="arrow3">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu3">
+                           <li><a href="" class="submenu__link">О центре</a></li>
+                           <li><a href="" class="submenu__link">Сертификаты</a></li>
+                           <li><a href="" class="submenu__link">Грамоты</a></li>
+                           <li><a href="" class="submenu__link">Команда</a></li>
+                           <li><a href="" class="submenu__link">Контакты</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Пресс-центр
+                           <span class="arrow" id="arrow2">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu2">
+                           <li><a href="" class="submenu__link">Пресса о нас</a></li>
+                           <li><a href="" class="submenu__link">Новости</a></li>
+                           <li><a href="" class="submenu__link">Статьи</a></li>
+                           <li><a href="" class="submenu__link">Фотогалерея</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+
+            </div>
+            <div class="header__buttons buttons-header">
+               <div class="buttons-header__tel">
+                  <a href="te:+998901234567">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                     </svg>
+                     +998 90 123 45 67
+                  </a>
+               </div>
+               <div class="buttons-header__btn">
+                  <a href="">Записаться <span class="plus-icon">+</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <main class="main">
+         <section class="about-page">
+            <div class="about-page__title">
+               <h1>О Центре</h1>
+            </div>
+            <div class="about-page__body container">
+               <section class="about about-page__add">
+                  <div class="about__body container">
+                     <div class="about__info">
+                        <div class="about__text">
+                           <div class="about__subtitle  element-animation">
+                              <h5>Добро пожаловать в Центр А. Назарова</h5>
+                           </div>
+                           <div class="about__div  element-animation">
+                              <p>Медицинская фирма «АНИК» — одна из первых частных фирм Узбекистана, которая предложила
+                                 в 1993 году альтернативные медицинские услуги больным с различными нарушениями
+                                 опорно-двигательной системы. Основатель фирмы и её бессменный руководитель — Алексей
+                                 Константинович Назаров родился 9 марта 1952 г. Закончил среднюю школу № 10 г.Янгиюля. В
+                                 1970г. поступил во 2-й Московский мединститут им. Пирогова Н.И. С 1977г. работал в НИИ
+                                 Педиатрии Минздрава РУз. С 1981 по 1983 г.г. — Учеба в аспирантуре в НИИ педиатрии АМИ
+                                 (Москва). С 1991 по 1993 — докторантура в Санкт-Петербургской Медицинской
+                                 Педиатрической Академии. Проходил учебу в США,
+                                 Германии, Греции.</p>
+                           </div>
+                        </div>
+                        <div class="about__cards">
+                           <div class="about__card">
+                              <div class="about__card-title">Достоинства</div>
+                              <div class="about__card-text">Это весьма известное в Узбекистане и за его пределами,
+                                 медицинское
+                                 учреждение!</div>
+                           </div>
+                           <div class="about__card">
+                              <div class="about__card-title">Качество</div>
+                              <div class="about__card-text">Признаны лидером в лечении заболеваний опорно-двигательной
+                                 системы!</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="about__image">
+                        <img src="../images/home/about-img.png" alt="cabinet">
+                     </div>
+                  </div>
+                  <div class="about__div about-page__div  element-animation">
+                     <p>Медицинская фирма «АНИК» — одна из первых частных фирм Узбекистана, которая предложила
+                        в 1993 году альтернативные медицинские услуги больным с различными нарушениями
+                        опорно-двигательной системы. Основатель фирмы и её бессменный руководитель — Алексей
+                        Константинович Назаров родился 9 марта 1952 г. Закончил среднюю школу № 10 г.Янгиюля. В
+                        1970г. поступил во 2-й Московский мединститут им. Пирогова Н.И. С 1977г. работал в НИИ
+                        Педиатрии Минздрава РУз. С 1981 по 1983 г.г. — Учеба в аспирантуре в НИИ педиатрии АМИ
+                        (Москва). С 1991 по 1993 — докторантура в Санкт-Петербургской Медицинской
+                        Педиатрической Академии. Мануальной терапией занимается с 1976г. Проходил учебу в США,
+                        Германии, Греции.</p>
+                     <p>«С годами я только больше укрепился в правильности выведенного мною (почти тридцать лет назад)
+                        закона о роли позвоночника в здоровье человека — говорит А.Назаров — Это мое убеждение
+                        основывается на тысячах вылеченных пациентах. В этом не только моя заслуга, но и целого
+                        коллектива опытных врачей, которые прилагают максимум усилий для успешного лечения тяжелых
+                        заболеваний, таких как:</p>
+                     - остеохондроз; <br>
+
+                     - сколиоз;<br>
+
+                     - двигательные и неврологические расстройства при ДЦП;<br>
+
+                     - грыжи межпозвонкового диска;<br>
+
+                     - дисплазии тазобедренных суставов у детей;<br>
+
+                     - заболевания внутренних органов, связанных с деформацией позвонков (язвенной болезни, головных
+                     болей, расстройств нервной и сердечно-сосудистой системы).<br>
+                  </div>
+                  <div class="homeinfo">
+                     <div class="homeinfo__body container">
+                        <div class="homeinfo__block  element-animation">
+                           <div class="homeinfo__icon">
+                              <img src="../images/home/benefits-1.png" alt="icon">
+                           </div>
+                           <div class="homeinfo__title">
+                              <h3>Лучшие доктора</h3>
+                           </div>
+                           <div class="homeinfo__text">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+                           </div>
+                        </div>
+                        <div class="homeinfo__block  element-animation">
+                           <div class="homeinfo__icon">
+                              <img src="../images/home/benefits-2.png" alt="icon">
+                           </div>
+                           <div class="homeinfo__title">
+                              <h3>Своя методика</h3>
+                           </div>
+                           <div class="homeinfo__text">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+                           </div>
+                        </div>
+                        <div class="homeinfo__block  element-animation">
+                           <div class="homeinfo__icon">
+                              <img src="../images/home/benefits-3.png" alt="icon">
+                           </div>
+                           <div class="homeinfo__title">
+                              <h3>24/7 поддержка</h3>
+                           </div>
+                           <div class="homeinfo__text">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, natus!</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about__div  element-animation">
+                     <p>«Встать на ноги было довольно непросто, ведь начинали мы в 1985-ом, когда кооперативное движение
+                        только зарождалось, — вспоминает Алексей Константинович. Постепенно мануальная терапия пробивала
+                        себе дорогу, рынок медицинских услуг расширялся. Так появилась идея — заняться лечением
+                        централизованно, выйти за круг обычных врачей. Но на этом пути пришлось преодолеть немало
+                        барьеров. Особо тяжелым был период, когда не разрешалось продавать медицинское оборудование
+                        негосударственным медицинским учреждениям. Сейчас в республике созданы благоприятные
+                        законодательные условия для развития предпринимательства.»</p>
+                     <p>Уникальность метода лечения, разработанного А.К. Назаровым, заключается в восстановлении функций
+                        нервных окончаний любых органов при помощи комплексного воздействия на позвоночник. Это
+                        мануальная терапия, специальный массаж, новейшие методы физио- и лазеро- лечения,
+                        электростимуляция, фитотерапия и усовершенствованная лечебная гимнастика, коррегирующие
+                        гимнастические упражнения по английской методике. А.К. Назарову принадлежит первенство в
+                        основании такого прогрессивного на сегодняшний день метода, как кинезотерапия (лечение
+                        движением), которая уже обрело большую популярность на Западе, а ныне успешно прививается в
+                        республике.</p>
+                     <p>Для людей которым трудно оплатить курс лечения, существуют определенные льготы. Некоторые
+                        малообеспеченные пациенты пользуются услугами центра бесплатно. Список этот можно дополнить
+                        участниками войны, воинами-афганцами. Есть льготы и для матерей, имеющих детей-инвалидов
+                        детства, врачей и учителей. Особая забота — о детях. 50% пациентов относится именно к этой
+                        категории. Ежегодно около 30 «тяжелых» пациентов лечатся в центре бесплатно. Центр посетили
+                        десятки тысяч пациентов. Слава о докторе Назарове и «назаровцах» вышла далеко за пределы столицы
+                        Узбекистана. Его ученики успешно работают во всех уголках республики, в зарубежье. Методики
+                        Назарова поддержаны специалистами Греции, Турции, США, России.</p>
+                  </div>
+                  .
+               </section>
+               <div class="about-page__cards">
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-1.png" alt="icon">
+                        </div>
+                        <h3>Честность</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-2.png" alt="icon">
+                        </div>
+                        <h3>Обучение</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-3.png" alt="icon">
+                        </div>
+                        <h3>Забота</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-4.png" alt="icon">
+                        </div>
+                        <h3>Доверие</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-5.png" alt="icon">
+                        </div>
+                        <h3>Технологии</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+                  <div class="about-page__card card-about-page">
+                     <div class="card-about-page__title">
+                        <div class="card-about-page__title-icon">
+                           <img src="../images/about/value-6.png" alt="icon">
+                        </div>
+                        <h3>Практика</h3>
+                     </div>
+                     <div class="card-about-page__text">
+                        Lorem ipsum dolor sit amet consectetur. Vestibulum elit eu vulputate tristique enim molestie
+                        neque.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer-main">
+            <div class="footer-main__body container">
+               <div class="footer-main__menu">
+                  <div class="footer-main__title title">
+                     <h4>Меню</h4>
+                  </div>
+                  <ul class="footer-main__list">
+                     <li><a href="index.html" class="footer-main__link">Главная</a></li>
+                     <li><a href="#" class="footer-main__link">Методы терапии</a></li>
+                     <li><a href="../price/" class="footer-main__link">Прайс лист</a></li>
+                     <li><a href="" class="footer-main__link">О центре</a></li>
+                     <li><a href="" class="footer-main__link">Сертификаты</a></li>
+                     <li><a href="" class="footer-main__link">Грамоты</a></li>
+                     <li><a href="" class="footer-main__link">Врачи</a></li>
+                     <li><a href="" class="footer-main__link">Новости</a></li>
+                     <li><a href="" class="footer-main__link">Статьи</a></li>
+                     <li><a href="" class="footer-main__link">Фотогалерея</a></li>
+                  </ul>
+               </div>
+               <div class="footer-main__address">
+                  <div class="footer-main__title title">
+                     <h4>Контакты</h4>
+                  </div>
+                  <p><img src="../images/footer/location.png" alt="loc">
+                     <a href="">г. Ташкент, Мирзо-Улугбекский район
+                        100052, ул. Катта Дархон, дом 5 <br>
+                        Остановка «Дархон-3» (бывшая «Новомосковская») — Автобусы № 2, 58, 83, 88</a>
+                  </p>
+                  <p><img src="../images/footer/telephone-2.png" alt="tel">
+                     <a href="">+998 90 123 45 67</a>
+                  </p>
+                  <p><img src="../images/footer/mail.png" alt="mail"><a href="">support@nazarov.uz</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div class="footer-bottom__body container">
+               <div class="footer-bottom__left">
+                  Сайт медицинского центра Алексея Назарова
+               </div>
+               <div class="footer-bottom__logo">
+                  <img src="../images/logo.png" alt="logo">
+               </div>
+               <div class="footer-bottom__right">
+                  © АНИК 2023. All Rights Reserved
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="../js/script.js"></script>
+</body>
+
+</html>
