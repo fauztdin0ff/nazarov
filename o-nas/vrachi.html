@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../style/style.css">
+   <title>Методы терапии в центре Алексея Назарова</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="header">
+         <div class="header__body container">
+            <div class="header__logo">
+               <a href=""><img src="../images/logo.png" alt="logo"></a>
+            </div>
+            <div class="header__menu menu">
+               <div class="menu__icon">
+                  <span></span>
+               </div>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="../index.html" class="menu__link active">Главная</a></li>
+
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Методы
+                           терапии
+                           <span class="arrow" id="arrow1">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu1">
+                           <li><a href="../metody/biorezonansnaya-diagnostika.html" class="submenu__link">Биорезонансная
+                                 <br>
+                                 рефлексодиагностика</a></li>
+                           <li><a href="../metody/manualnaya-terapiya.html" class="submenu__link">Мануальная терапия</a>
+                           </li>
+                           <li><a href="../metody/trakcionnaya-terapiya.html" class="submenu__link">Тракционная
+                                 терапия</a></li>
+                           <li><a href="../metody/" class="submenu__link">Все методы</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="../price/" class="menu__link">Прайс-лист</a></li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu3', 'arrow3')">О нас
+                           <span class="arrow" id="arrow3">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu3">
+                           <li><a href="index.html" class="submenu__link">О центре</a></li>
+                           <li><a href="#" class="submenu__link">Врачи</a></li>
+                           <li><a href="kontakty.html" class="submenu__link">Контакты</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Пресс-центр
+                           <span class="arrow" id="arrow2">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu2">
+                           <li><a href="" class="submenu__link">Пресса о нас</a></li>
+                           <li><a href="" class="submenu__link">Новости</a></li>
+                           <li><a href="" class="submenu__link">Статьи</a></li>
+                           <li><a href="" class="submenu__link">Фотогалерея</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+
+            </div>
+            <div class="header__buttons buttons-header">
+               <div class="buttons-header__tel">
+                  <a href="te:+998901234567">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                     </svg>
+                     +998 90 123 45 67
+                  </a>
+               </div>
+               <div class="buttons-header__btn">
+                  <a href="">Записаться <span class="plus-icon">+</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <main class="main">
+         <ul class="breadcrumbs">
+            <li><a href="../">Главная</a></li>
+            <svg width="8px" height="8px" viewBox="0 0 5 9" fill="blue">
+               <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+               </path>
+            </svg>
+            <li><a href="index.html">О нас</a></li>
+            <svg width="8px" height="8px" viewBox="0 0 5 9" fill="blue">
+               <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+               </path>
+            </svg>
+            <li>Врачи</li>
+         </ul>
+         <section class="about-page team-page">
+            <div class="about-page__title">
+               <h1>Врачи</h1>
+            </div>
+            <div class="team-page__body container">
+               <div class="team-page__cards">
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/1.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Назаров А.К.
+                     </div>
+                     <div class="card-team-page__special">
+                        Учредитель, мануальный терапевт, к.м.н
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/2.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Ицков Э.Р.
+                     </div>
+                     <div class="card-team-page__special">
+                        Директор
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/3.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Каледа О.А.
+                     </div>
+                     <div class="card-team-page__special">
+                        Зам.директора по общим вопросам
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/4.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Арсланова Г.Н.
+                     </div>
+                     <div class="card-team-page__special">
+                        Врач-педиатр высшей категории
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/5.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Суюмов Ф.А.
+                     </div>
+                     <div class="card-team-page__special">
+                        Врач ЛФК, кмн
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/6.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Чередниченко О.П.
+                     </div>
+                     <div class="card-team-page__special">
+                        Врач физиотерапевт
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/7.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Каледа А.К.
+                     </div>
+                     <div class="card-team-page__special">
+                        Главный инженер
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/8.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Хамидова Н.
+                     </div>
+                     <div class="card-team-page__special">
+                        Кассир
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/9.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Шадыева Д.Б.
+                     </div>
+                     <div class="card-team-page__special">
+                        Мед.сестра
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/10.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Скворкова С.В.
+                     </div>
+                     <div class="card-team-page__special">
+                        Администратор
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/11.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Алимжанова Н.З.
+                     </div>
+                     <div class="card-team-page__special">
+                        Сестра-хозяйка
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/12.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Андронова Ю.В.
+                     </div>
+                     <div class="card-team-page__special">
+                        Массажист
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/13.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Камилова Р.Л.
+                     </div>
+                     <div class="card-team-page__special">
+                        Массажист
+                     </div>
+                  </div>
+                  <div class="team-page__card card-team-page">
+                     <div class="card-team-page__image">
+                        <img src="../images/team/14.png" alt="doctor">
+                     </div>
+                     <div class="card-team-page__name">
+                        Кузнецов С.В.
+                     </div>
+                     <div class="card-team-page__special">
+                        Массажист
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <section class="schedule">
+               <div class="schedule__body container">
+                  <div class="schedule__block">
+                     <div class="schedule__title">
+                        <h2>Часы работы</h2>
+                     </div>
+                     <div class="schedule__subtitle">
+                        <h3>Запись на прием согласно расписанию</h3>
+                     </div>
+                     <div class="schedule__list">
+                        <table>
+                           <tr>
+                              <th>День недели</th>
+                              <th>Рабочие часы</th>
+                              <th>Обеденный перерыв</th>
+                           </tr>
+                           <tr>
+                              <td>ПН</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>ВТ</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>СР</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>ЧТ</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>ПТ</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>СБ</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                           <tr>
+                              <td>ВС</td>
+                              <td>9:00-18:00</td>
+                              <td>13:00-14:00</td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer-main">
+            <div class="footer-main__body container">
+               <div class="footer-main__menu">
+                  <div class="footer-main__title title">
+                     <h4>Меню</h4>
+                  </div>
+                  <ul class="footer-main__list">
+                     <li><a href="index.html" class="footer-main__link">Главная</a></li>
+                     <li><a href="../metody/" class="footer-main__link">Методы терапии</a></li>
+                     <li><a href="../price/" class="footer-main__link">Прайс лист</a></li>
+                     <li><a href="index.html" class="footer-main__link">О центре</a></li>
+                     <li><a href="#" class="footer-main__link">Врачи</a></li>
+                     <li><a href="" class="footer-main__link">Новости</a></li>
+                     <li><a href="" class="footer-main__link">Статьи</a></li>
+                     <li><a href="" class="footer-main__link">Фотогалерея</a></li>
+                     <li><a href="kontakty.html" class="submenu__link">Контакты</a></li>
+                  </ul>
+               </div>
+               <div class="footer-main__address">
+                  <div class="footer-main__title title">
+                     <h4>Контакты</h4>
+                  </div>
+                  <p><img src="../images/footer/location.png" alt="loc">
+                     <a href="">г. Ташкент, Мирзо-Улугбекский район
+                        100052, ул. Катта Дархон, дом 5 <br>
+                        Остановка «Дархон-3» (бывшая «Новомосковская») — Автобусы № 2, 58, 83, 88</a>
+                  </p>
+                  <p><img src="../images/footer/telephone-2.png" alt="tel">
+                     <a href="">+998 90 123 45 67</a>
+                  </p>
+                  <p><img src="../images/footer/mail.png" alt="mail"><a href="">support@nazarov.uz</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div class="footer-bottom__body container">
+               <div class="footer-bottom__left">
+                  Сайт медицинского центра Алексея Назарова
+               </div>
+               <div class="footer-bottom__logo">
+                  <img src="../images/logo.png" alt="logo">
+               </div>
+               <div class="footer-bottom__right">
+                  © АНИК 2023. All Rights Reserved
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="../js/script.js"></script>
+</body>
+
+</html>

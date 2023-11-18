@@ -60,6 +60,8 @@ body {
 }
 main {
 	flex: 1 1 auto;
+	position: relative;
+	padding-top: 50px;
 }
 .container {
 	width: min(100% - 1rem, 1200px);
@@ -487,6 +489,24 @@ main {
 	right: 5px;
 	animation: rotate 3s ease 3s infinite;
 	transform-origin: 50% 55%;
+}
+.breadcrumbs {
+	position: absolute;
+	top: 0;
+	@include adaptiv-value("left", 100, 10, 1);
+	padding: 0;
+	margin: 10px 0;
+	a {
+		color: $blue;
+	}
+}
+.breadcrumbs li {
+	display: inline-block;
+	color: $lightGrey;
+	margin-inline: 4px;
+	@include adaptiv-value("font-size", 12, 10, 1);
+}
+.breadcrumbs li:last-child {
 }
 .home {
 	overflow-x: hidden;
@@ -2102,6 +2122,12 @@ footer {
 	&__div {
 		margin-top: 25px;
 		margin-bottom: 0;
+		@media (max-width: 767px) {
+			& {
+				width: 90%;
+				margin-inline: auto;
+			}
+		}
 	}
 }
 .card-about-page {
@@ -2135,5 +2161,107 @@ footer {
 		font-style: normal;
 		line-height: 150%;
 		letter-spacing: 0.32px;
+	}
+}
+
+/*--------------------------------------------TEAM PAGE---------------------------------------------*/
+
+.team-page {
+	position: relative;
+	&::before {
+		bottom: 3%;
+		right: -250px;
+	}
+	&__body {
+		padding: 40px 0;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 100px;
+		@media (max-width: 600px) {
+			& {
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+				gap: 30px;
+			}
+		}
+	}
+
+	&__card {
+	}
+}
+.card-team-page {
+	text-align: center;
+	&__image {
+		margin-bottom: 20px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__name {
+		font-style: normal;
+		@include adaptiv-value("font-size", 24, 16, 1);
+		white-space: nowrap;
+		line-height: 120%;
+		letter-spacing: -0.27px;
+	}
+
+	&__special {
+		@include adaptiv-value("font-size", 16, 13, 1);
+		line-height: 150%;
+		letter-spacing: 0.32px;
+		color: $lightGrey;
+	}
+}
+
+.schedule {
+	background: url("../images/team/bg.png") center / cover no-repeat;
+	padding: 40px 0;
+	margin-top: 40px;
+	@media (max-width: 767px) {
+		& {
+			background: url("../images/team/bg.png") 100% 50% / cover no-repeat;
+		}
+	}
+	&__body {
+	}
+
+	&__block {
+		background: rgba(255, 255, 255, 0.3);
+		box-shadow: 0px 0px 5px 0px rgba(0, 22, 86, 0.08);
+		backdrop-filter: blur(50px);
+		padding: 48px 24px;
+		max-width: 550px;
+	}
+
+	&__title {
+		color: $blue;
+		font-size: 16px;
+		line-height: 150%;
+		letter-spacing: 0.32px;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		@include adaptiv-value("font-size", 32, 18, 1);
+		line-height: 120%;
+		letter-spacing: -0.36px;
+		margin-bottom: 25px;
+	}
+
+	&__list {
+		table {
+			border-collapse: collapse;
+		}
+		tr {
+		}
+		th,
+		td {
+			text-align: center;
+			@include adaptiv-value("padding", 13, 6, 1);
+			@include adaptiv-value("font-size", 16, 12, 1);
+		}
 	}
 }
