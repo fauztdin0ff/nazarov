@@ -2265,3 +2265,65 @@ footer {
 		}
 	}
 }
+
+/*--------------------------------------------SMI---------------------------------------------*/
+.smi {
+	&__body {
+		padding-bottom: 70px;
+	}
+
+	&__blocks {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		column-gap: 30px;
+		row-gap: 80px;
+		.news__block {
+			max-width: 100%;
+			p {
+				@include adaptiv-value("font-size", 14, 12, 1);
+				color: $lightGrey;
+				margin-bottom: 6px;
+				display: block;
+				display: -webkit-box;
+				max-height: 70px; /* Замените на желаемую высоту */
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 4; /* Замените на желаемое количество строк */
+				-webkit-box-orient: vertical;
+			}
+		}
+		.block-news__info {
+			bottom: -50px;
+			@include adaptiv-value("padding", 24, 16, 1);
+		}
+		.block-news__more {
+			@media (max-width: 499px) {
+				& {
+					flex-direction: row;
+				}
+			}
+		}
+		.block-news__author {
+			img {
+				object-fit: cover;
+			}
+		}
+		.block-news__title {
+			@include adaptiv-value("font-size", 18, 16, 1);
+			margin-bottom: 10px;
+			a {
+				color: #000;
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+	&__button-more {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		z-index: 2;
+		transform: translateX(-50%);
+	}
+}
