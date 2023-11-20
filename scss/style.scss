@@ -145,8 +145,7 @@ main {
 				& span {
 					height: 4px;
 					position: absolute;
-					left: 50%;
-					transform: translate(-50%, 0);
+					left: 0;
 					background-color: $darkGrey;
 					border-radius: 3px;
 					transition: all 0.3s ease 0s;
@@ -161,35 +160,27 @@ main {
 				}
 				&::after {
 					bottom: 10px;
-					width: 70%;
-					transform: translate(-30%, 0);
 				}
 				& span {
-					top: 50%;
-					transform: translate(-50%, -50%);
+					top: 23px;
 				}
 			}
 			&._active {
 				background-color: $blue;
+				border: 1px solid #fff;
+				border-radius: 6px;
 				&::before {
-					top: 50%;
-					width: 50%;
-					transform: translate(-50%, 0) rotate(45deg);
+					top: 23px;
+					transform: rotate(45deg);
 					background-color: #fff;
 				}
 				&::after {
-					width: 50px;
-					height: 43px;
-					border-radius: 6px;
-					border: 1px solid #fff;
-					background: none;
-					top: 50%;
-					transform: translate(-50%, -50%);
+					top: 23px;
+					transform: rotate(-45deg);
+					background-color: #fff;
 				}
 				& span {
-					width: 50%;
-					transform: translate(-50%, 0) rotate(-45deg);
-					background-color: #fff;
+					display: none;
 				}
 			}
 		}
@@ -598,6 +589,7 @@ main {
 		letter-spacing: -1.22px;
 		font-weight: 700;
 		font-style: normal;
+		background-color: transparent;
 		@media (max-width: 475px) {
 			& {
 				text-align: center;
@@ -609,8 +601,9 @@ main {
 
 	&__subtitle {
 		@include adaptiv-value("font-size", 18, 12, 1);
-		color: $lightBlue;
+		color: #f52626;
 		margin-bottom: 15px;
+		background-color: transparent;
 		@media (max-width: 600px) {
 			& {
 				margin-bottom: 15px;
@@ -2282,7 +2275,7 @@ footer {
 			p {
 				@include adaptiv-value("font-size", 14, 12, 1);
 				color: $lightGrey;
-				margin-bottom: 6px;
+				margin-bottom: 10px;
 				display: block;
 				display: -webkit-box;
 				max-height: 70px; /* Замените на желаемую высоту */

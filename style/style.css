@@ -165,8 +165,7 @@ main {
   .menu__icon::before, .menu__icon::after, .menu__icon span {
     height: 4px;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 0;
     background-color: #243238;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
@@ -180,35 +179,27 @@ main {
   }
   .menu__icon::after {
     bottom: 10px;
-    width: 70%;
-    transform: translate(-30%, 0);
   }
   .menu__icon span {
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 23px;
   }
   .menu__icon._active {
     background-color: #4169e1;
+    border: 1px solid #fff;
+    border-radius: 6px;
   }
   .menu__icon._active::before {
-    top: 50%;
-    width: 50%;
-    transform: translate(-50%, 0) rotate(45deg);
+    top: 23px;
+    transform: rotate(45deg);
     background-color: #fff;
   }
   .menu__icon._active::after {
-    width: 50px;
-    height: 43px;
-    border-radius: 6px;
-    border: 1px solid #fff;
-    background: none;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 23px;
+    transform: rotate(-45deg);
+    background-color: #fff;
   }
   .menu__icon._active span {
-    width: 50%;
-    transform: translate(-50%, 0) rotate(-45deg);
-    background-color: #fff;
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -664,6 +655,7 @@ main {
   letter-spacing: -1.22px;
   font-weight: 700;
   font-style: normal;
+  background-color: transparent;
 }
 @media (max-width: 1200px) {
   .home__title {
@@ -679,8 +671,9 @@ main {
 }
 .home__subtitle {
   font-size: 18px;
-  color: #9bb3fb;
+  color: #f52626;
   margin-bottom: 15px;
+  background-color: transparent;
 }
 @media (max-width: 1200px) {
   .home__subtitle {
@@ -2451,7 +2444,7 @@ footer a:hover {
 .smi__blocks .news__block p {
   font-size: 14px;
   color: #7a7f85;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   display: block;
   display: -webkit-box;
   max-height: 70px; /* Замените на желаемую высоту */
