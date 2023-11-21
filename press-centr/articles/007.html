@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="../../style/lightgallery.css" />
+   <link type="text/css" rel="stylesheet" href="../../style/lg-zoom.css" />
+   <link type="text/css" rel="stylesheet" href="../../style/lg-thumbnail.css" />
+   <link rel="stylesheet" href="../../style/style.css">
+   <title>Методы терапии в центре Алексея Назарова</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="header">
+         <div class="header__body container">
+            <div class="header__logo">
+               <a href="https://doktornazarov.uz/"><img src="../../images/logo.png" alt="logo"></a>
+            </div>
+            <div class="header__menu menu">
+               <div class="menu__icon">
+                  <span></span>
+               </div>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="../../index.html" class="menu__link active">Главная</a></li>
+
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Методы
+                           терапии
+                           <span class="arrow" id="arrow1">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu1">
+                           <li><a href="../../metody/biorezonansnaya-diagnostika.html"
+                                 class="submenu__link">Биорезонансная
+                                 <br>
+                                 рефлексодиагностика</a></li>
+                           <li><a href="../../metody/manualnaya-terapiya.html" class="submenu__link">Мануальная
+                                 терапия</a>
+                           </li>
+                           <li><a href="../../metody/trakcionnaya-terapiya.html" class="submenu__link">Тракционная
+                                 терапия</a></li>
+                           <li><a href="../../metody/" class="submenu__link">Все методы</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="../../price/" class="menu__link">Прайс-лист</a></li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu3', 'arrow3')">О нас
+                           <span class="arrow" id="arrow3">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu3">
+                           <li><a href="../../o-nas/index.html" class="submenu__link">О центре</a></li>
+                           <li><a href="../../o-nas/vrachi.html" class="submenu__link">Врачи</a></li>
+                           <li><a href="../../o-nas/kontakty.html" class="submenu__link">Контакты</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Пресс-центр
+                           <span class="arrow" id="arrow2">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu2">
+                           <li><a href="../index.html" class="submenu__link">Пресса о нас</a></li>
+                           <li><a href="../article.html" class="submenu__link">Статьи</a></li>
+                           <li><a href="../gallery.html" class="submenu__link">Фотогалерея</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+
+            </div>
+            <div class="header__buttons buttons-header">
+               <div class="buttons-header__tel">
+                  <a href="te:+998901234567">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                     </svg>
+                     +998 90 123 45 67
+                  </a>
+               </div>
+               <div class="buttons-header__btn">
+                  <a href="">Записаться <span class="plus-icon">+</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <main class="main">
+         <div class="read-news">
+            <div class="read-news__body container">
+               <div class="read-news__content">
+                  <div class="read-news__news1">
+
+                     <div class="read-news__title">Физиотерапия</div>
+                     <p>Кому из нас незнакомы боли в спине, которые в быту именуются «прострелами»? Вариаций на эту тему
+                        множество &#8212; тут и «шейные прострелы», и «радикулит», и «плечелопаточные боли», и даже
+                        сердечная боль. Вся это богатая палитра является отображением одного и того же заболевания-
+                        «остеохондроза позвоночника». К сожалению распространенный среди населения термин «отложение
+                        солей», подменяющий понятие «остеохондроз» до сих пор живет, и прочно закрепился в умах
+                        большинства людей.</p>
+                     <p>На самом деле при остеохондрозе происходят дегенеративно-дистрофические изменения как в
+                        поверхностных тканях &#8212; коже, подкожной клетчатке, фасциях и мышцах, так и в глубоких –
+                        сосудах, нервах, связках и хрящах позвоночного столба и в структуре тел позвонков. Процесс
+                        старения (дегенерация) происходит медленно, постепенно втягивая поверхностное, а затем и
+                        глубокие тканевые структуры. В отдельных случаях процесс может начаться остро и сразу с
+                        глубинных структур (травма и возникновение грыжи диска).</p>
+                     <p>В динамике «старения тканей» происходит истощение межпозвонковых дисков, артроз межпозвоночных
+                        суставов, что в свою очередь приводит к сдавливанию спинного мозга. Это и является истинной
+                        причиной болевого синдрома при остеохондрозе, а так же причиной для многочисленных поражений
+                        периферической нервной системы. К ним относятся чувствительные расстройства в виде снижения
+                        чувствительности в пальцах рук и ног, изменения цвета конечностей до (багрово-синюшного),
+                        атрофия кожи, тугоподвижность суставов верхнего и нижнего пояса, нарушения координации движений
+                        и многое другое.</p>
+                     <p>Важнейшей задачей лечения остеохондроза является относительная быстрота получения результатов
+                        (т.е. как можно быстрее купировать болевой и другие симптомы у больного) и непосредственное
+                        воздействие на место поражения ( участок тела, «сигналящий» о локализации остеохондроза). Всем
+                        этим требованиям отвечают методы современной физиотерапии, т.е. методы физического воздействия
+                        для лечения и реабелитации больных остеохондрозом.</p>
+                     <p>К ним относятся:<br />
+                        <strong>- воздействие излучением (ультрафиолетовым, инфракрасным) в зоне поражения.
+                        </strong><strong><br />
+                        </strong><strong>электрофорез различных лекарственных веществ (аналгетиков, анестетиков) в зонах
+                           иррадиации болей.</strong>
+                     </p>
+                     <p><strong> </strong><strong><br />
+                        </strong><strong>- ультрафонофорез (введение лекарственных препаратов с помощью ультразвука) в
+                           область проекции уплотнения мышц, болевых точек, рефлексогенных зон. </strong></p>
+                     <p><strong><br />
+                        </strong><strong> &#8212; терапия различными видами токов (синусомодулированные, низко-
+                           высокочастотные, интерференционные токи) на зоны иррадиации болей и на сегментарные зоны
+                           позвоночника. </strong></p>
+                     <p><strong><br />
+                        </strong><strong>- терапия аппаратами переменного магнитного поля (проводится паравертебрально)
+                           лазеротерапия – проводится, как местно в области болевых зон, так и по акопунктурным точкам.
+                        </strong></p>
+                     <p>Выше перечисленные методы свидетельствуют о широком диапазоне воздействия физических факторов и
+                        разнообразии методов физиотерапии.<br />
+                        Зачастую бывает, что перепробовав один за другим методы лечения больной остается
+                        неудовлетворенным, получив лишь частичное излечение или уменьшение болевого синдрома.<br />
+                        При лечении больных остеохондрозом используется физиотерапевтическая аппаратура (позволяющая
+                        сочетать в себе достоинства нескольких видов аппаратуры для физиолечения. Т.е. за одну процедуру
+                        больной испытывает на себе воздействия, как программируемого тока, так и ультрофонофореза
+                        лекарственных мазей, что является очень эффективным в лечении болевого синдрома любой этиологии,
+                        синдрома нервно-трофических расстройств при наличии ограничения подвижности в суставах-
+                        восстановление движений.<br />
+                        Все вышеупомянутое относится к уникальной аппаратуре &#8212; приборам «PRIMEDIC» и «SONO»,
+                        которые на сегодняшний день являются наиболее современными образцами медицинской техники.</p>
+                     <p>Применяются они в следующих областях терапии:</p>
+                     <p><strong><br />
+                        </strong><strong>- лечение острых и хронических болей любого происхождения;</strong></p>
+                     <p><strong><br />
+                        </strong><strong>- ионофорез лекарственных веществ и одновременный ультрафонофорез лекарственных
+                           мазей с аналгетическим и сосудистым эффектом воздействия; </strong></p>
+                     <p><strong><br />
+                        </strong><strong>- мышечная стимуляция и лечение паралича; </strong></p>
+                     <p>В арсенале приборов «PRIMEDIC» находится более 40 программ для немедленной, ориентированной и
+                        индивидуальной терапии, основная задача которой является немедленное прекращение болевого
+                        приступа и восстановительная терапия нарушений функций позвоночника. Причем, эффект от процедуры
+                        больной ощущает уже в конце 1-го сеанса терапии.<br />
+                        Помимо оказания незамедлительного лечебного эффекта, терапия приборами «PRIMEDIC» и «SONO»
+                        является хорошей фоновой подготовкой для проведения сеансов массажа и лечебной физкультуры,
+                        которые необходимы для реабилитации больных с остеохондрозом. Учитывая опыт по лечению больных
+                        остеохондрозом можно сказать о надежности проводимой терапии, отсутствии любых противопоказаний
+                        к лечению аппаратами «PRIMEDIC» и достигаемой при их помощи длительной ремиссии заболевания.</p>
+
+
+                     <!-- 
+                     <p class="author-name">Тамара Санаева. <br> 12.09.2014г</p> -->
+                     <div class="read-news-buttons">
+                        <div class="blue-button">
+                           <a href="../article.html"><span
+                                 style="transform: translateY(2px) rotate(180deg); margin-right: 10px;">&#10132;</span>Назад</a>
+                        </div>
+                     </div>
+                  </div>
+                  <aside class="biorezonansnaya-diagnostika__sidebar sidebar">
+                     <div class="sidebar__price">
+                        <ul class="sidebar__price-table">
+
+                           <p>Прайс</p>
+                           <li>Консультация Назарова <span>300 000</span></li>
+                           <li>Консультация специалиста <span>200 000</span></li>
+                           <li>Массаж(1 зона) <span>75 000</span></li>
+                           <li>Общий массаж<span>350 000</span></li>
+                           <li>Массаж вибрационный<span>50 000</span></li>
+                           <li>Мануальная терапия(1 зона)<span>75 000</span></li>
+                        </ul>
+                        <div class="white-button">
+                           <a href="../../price/">Весь прайс-лист</a>
+                        </div>
+                     </div>
+                     <div class="sidebar__today">
+                        <p>АНИК сегодня</p>
+                        <div class="sidebar__gallery">
+                           <div id="lightgallery" class="lightgallery-int">
+                              <a href="../../images/anik-today/1.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                              </a>
+                              <a href="../../images/anik-today/2.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                              </a>
+                              <a href="../../images/anik-today/3.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                              </a>
+                              <a href="../../images/anik-today/4.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                              </a>
+                              <a href="../../images/anik-today/5.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                              </a>
+                              <a href="../../images/anik-today/6.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                              </a>
+                              <a href="../../images/anik-today/7.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                              </a>
+                              <a href="../../images/anik-today/8.png" class="gallery-item">
+                                 <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sidebar__nazart">
+                        <img src="../../images/anik-today/nazart.gif" alt="nazart">
+                     </div>
+                  </aside>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer-main">
+            <div class="footer-main__body container">
+               <div class="footer-main__menu">
+                  <div class="footer-main__title title">
+                     <h4>Меню</h4>
+                  </div>
+                  <ul class="footer-main__list">
+                     <li><a href="../../index.html" class="footer-main__link">Главная</a></li>
+                     <li><a href="../../metody/" class="footer-main__link">Методы терапии</a></li>
+                     <li><a href="../../price/" class="footer-main__link">Прайс лист</a></li>
+                     <li><a href="../../o-nas/" class="footer-main__link">О центре</a></li>
+                     <li><a href="../../o-nas/vrachi.html" class="footer-main__link">Врачи</a></li>
+                     <li><a href="../../press-centr/article.html" class="footer-main__link">Статьи</a></li>
+                     <li><a href="../../press-centr/gallery.html" class="footer-main__link">Фотогалерея</a></li>
+                     <li><a href="../../o-nas/kontakty.html" class="footer-main__link">Контакты</a></li>
+                  </ul>
+               </div>
+               <div class="footer-main__address">
+                  <div class="footer-main__title title">
+                     <h4>Контакты</h4>
+                  </div>
+                  <p><img src="../../images/footer/location.png" alt="loc">
+                     <a href="https://www.google.com/maps/place/%D0%A1%D0%B0%D0%B9%D1%82+%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0+%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D1%8F+%D0%9D%D0%B0%D0%B7%D0%B0%D1%80%D0%BE%D0%B2%D0%B0/@41.3310967,69.3067111,17z/data=!3m1!4b1!4m6!3m5!1s0x38aef4c0a36c9ca1:0xd4cdf3e8614114a3!8m2!3d41.3310927!4d69.309286!16s%2Fg%2F11flw1c7_8?entry=ttu"
+                        target="_blank">г.
+                        Ташкент, Мирзо-Улугбекский район
+                        100052, ул. Катта Дархон, дом 5 <br>
+                        Остановка «Дархон-3» (бывшая «Новомосковская») — Автобусы № 2, 58, 83, 88</a>
+                  </p>
+                  <p><img src="../../images/footer/telephone-2.png" alt="tel">
+                     <a href="">+998 90 123 45 67</a>
+                  </p>
+                  <p><img src="../../images/footer/mail.png" alt="mail"><a href="">support@nazarov.uz</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div class="footer-bottom__body container">
+               <div class="footer-bottom__left">
+                  Сайт медицинского центра Алексея Назарова
+               </div>
+               <div class="footer-bottom__logo">
+                  <img src="../../images/logo.png" alt="logo">
+               </div>
+               <div class="footer-bottom__right">
+                  © АНИК 2023. All Rights Reserved
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="../../js/lightgallery.min.js"></script>
+   <script src="../../js/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+   <script src="../../js/plugins/zoom/lg-zoom.umd.js"></script>
+   <script src="../../js/script.js"></script>
+</body>
+
+</html>

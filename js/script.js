@@ -60,8 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Проверяем, есть ли галереи на странице
    if (galleries.length > 0) {
-      galleries.forEach(function (gallery) {
-         lightGallery(gallery, {
+      let lightGalleryInstance = null;
+
+      galleries.forEach(function (gallery, index) {
+         const galleryInstance = lightGallery(gallery, {
             plugins: [lgZoom],
             speed: 500,
             download: false,
@@ -70,10 +72,38 @@ document.addEventListener('DOMContentLoaded', function () {
             hideControlOnEnd: true,
             alignThumbnails: 'middle',
          });
+
+         // Обработка открытия галереи
+         gallery.addEventListener('click', function () {
+            // Открываем галерею
+            galleryInstance.openGallery();
+
+            // Добавляем хеш в URL для обозначения открытой галереи
+            const hash = `#gallery${index}`;
+            history.pushState({ galleryOpen: true, galleryHash: hash }, '', hash);
+
+            lightGalleryInstance = galleryInstance; // Сохраняем текущий экземпляр галереи
+         });
+      });
+
+      // Обработка события popstate (нажатие кнопки "Назад")
+      window.addEventListener('popstate', function (event) {
+         // Проверяем, было ли добавлено состояние истории при открытии галереи
+         if (event.state && event.state.galleryOpen) {
+            // Закрываем галерею
+            if (lightGalleryInstance) {
+               lightGalleryInstance.closeGallery();
+               lightGalleryInstance = null; // Сбрасываем текущий экземпляр галереи
+            }
+
+            history.pushState({}, '', '#'); // Удаляем хеш из URL
+         }
       });
    } else {
+      // В случае, если на странице нет галерей
    }
 });
+
 
 /*--------------------------------------------Animation text---------------------------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
