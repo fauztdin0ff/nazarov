@@ -77,25 +77,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*--------------------------------------------Animation text---------------------------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
-   setTimeout(function () {
-      let text = document.getElementById('text');
+   if (window.innerWidth > 767) {
+      setTimeout(function () {
+         let text = document.getElementById('text');
 
-      if (text) {
-         let originalText = text.innerHTML;
-         text.innerHTML = '';
+         if (text) {
+            let originalText = text.innerHTML;
+            text.innerHTML = '';
 
-         function typeText(index) {
-            text.innerHTML = originalText.substr(0, index);
-            if (index < originalText.length) {
-               setTimeout(function () {
-                  typeText(index + 1);
-               }, 100); // Скорость печати (в миллисекундах)
+            function typeText(index) {
+               text.innerHTML = originalText.substr(0, index);
+               if (index < originalText.length) {
+                  setTimeout(function () {
+                     typeText(index + 1);
+                  }, 100); // Скорость печати (в миллисекундах)
+               }
             }
-         }
 
-         typeText(0);
-      }
-   }, 100); // Задержка в 1 секунду перед запуском
+            typeText(0);
+         }
+      }, 1000); // Задержка в 1 секунду перед запуском
+   }
 });
 
 //-------------------------------Прелоадер и плавное появление блоков---------------------------------
@@ -128,3 +130,50 @@ function init() {
    };
 }
 
+/*--------------------------------------------ПАГИНАЦИЯ СТАТЕЙ---------------------------------------------*/
+let currentPage = 1; // Указывает на текущую страницу
+
+function showPage(pageNumber) {
+   const articles = document.querySelectorAll('.article__item');
+   const articlesPerPage = 5;
+
+   articles.forEach((article, index) => {
+      const start = (pageNumber - 1) * articlesPerPage;
+      const end = pageNumber * articlesPerPage;
+
+      if (index >= start && index < end) {
+         article.style.display = 'block';
+      } else {
+         article.style.display = 'none';
+      }
+   });
+
+   currentPage = pageNumber; // Обновляем текущую страницу
+
+   // Убираем класс active у всех кнопок пагинации
+   const paginationButtons = document.querySelectorAll('#pagination button');
+   paginationButtons.forEach(button => {
+      button.classList.remove('active');
+   });
+
+   // Добавляем класс active к текущей кнопке
+   const currentPageButton = document.querySelector(`#pagination button:nth-child(${pageNumber + 1})`);
+   currentPageButton.classList.add('active');
+
+   // Обновляем хеш в URL
+   window.location.hash = `page${pageNumber}`;
+
+   window.scrollTo({ top: 300, behavior: 'smooth' });
+}
+
+function prevPage() {
+   if (currentPage > 1) {
+      showPage(currentPage - 1);
+   }
+}
+
+function nextPage() {
+   // Здесь можно добавить логику, чтобы ограничить максимальную страницу
+   // Например: if (currentPage < maxPages) { ... }
+   showPage(currentPage + 1);
+}
