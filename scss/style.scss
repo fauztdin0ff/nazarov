@@ -133,6 +133,7 @@ main {
 	display: flex;
 	&__icon {
 		display: none;
+		will-change: transform;
 		@media (max-width: 767px) {
 			& {
 				display: block;
@@ -347,6 +348,7 @@ main {
 .buttons-header {
 	display: flex;
 	gap: 5px;
+	will-change: transform;
 	&__tel {
 		svg {
 			margin-right: 5px;
@@ -817,10 +819,10 @@ main {
 /*--------------------------------------------ABOUT---------------------------------------------*/
 .about {
 	padding: 100px 0;
-	overflow-x: hidden;
+	overflow: hidden;
 	@media (max-width: 650px) {
 		& {
-			padding: 40px 0;
+			padding: 40px 0 80px;
 		}
 	}
 	&__body {
@@ -1447,6 +1449,7 @@ main {
 			width: 32px;
 			height: 32px;
 			border-radius: 50%;
+			object-fit: cover;
 		}
 		span {
 			@include adaptiv-value("font-size", 16, 12, 1);

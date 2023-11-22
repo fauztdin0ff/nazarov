@@ -153,6 +153,7 @@ main {
 }
 .menu__icon {
   display: none;
+  will-change: transform;
 }
 @media (max-width: 767px) {
   .menu__icon {
@@ -372,6 +373,7 @@ main {
 .buttons-header {
   display: flex;
   gap: 5px;
+  will-change: transform;
 }
 .buttons-header__tel svg {
   margin-right: 5px;
@@ -927,11 +929,11 @@ main {
 /*--------------------------------------------ABOUT---------------------------------------------*/
 .about {
   padding: 100px 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 @media (max-width: 650px) {
   .about {
-    padding: 40px 0;
+    padding: 40px 0 80px;
   }
 }
 .about__body {
@@ -1606,6 +1608,8 @@ main {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .block-news__author span {
   font-size: 16px;

@@ -60,7 +60,7 @@
 }
 
 .lg-next {
-  right: 20px;
+  right: 10px;
 }
 
 .lg-next:before {
@@ -68,7 +68,7 @@
 }
 
 .lg-prev {
-  left: 20px;
+  left: 10px;
 }
 
 .lg-prev:after {
