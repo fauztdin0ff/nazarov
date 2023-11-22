@@ -1255,11 +1255,11 @@ main {
 		}
 	}
 	&__body {
-		background: url(../images/home/cont-banner.png) top left / contain no-repeat;
+		background: url(../images/home/cont-banner.webp) top left / contain no-repeat;
 		height: 100%;
 		@media (max-width: 767px) {
 			& {
-				background: url(../images/home/cont-banner.png) 80% 50% / cover no-repeat;
+				background: url(../images/home/cont-banner.webp) 80% 50% / cover no-repeat;
 			}
 		}
 		@media (max-width: 650px) {
