@@ -252,3 +252,29 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    }
 });
+
+/*--------------------------------------------кнопка наверх---------------------------------------------*/
+// Появление кнопки "наверх" при определенном пролистывании страницы
+window.onscroll = function () {
+   showScrollToTopButton();
+};
+
+function showScrollToTopButton() {
+   var scrollToTopButton = document.querySelector('.scroll-to-top');
+   if (scrollToTopButton) {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         scrollToTopButton.style.display = "block";
+      } else {
+         scrollToTopButton.style.display = "none";
+      }
+   }
+}
+
+// Плавная прокрутка страницы вверх при нажатии на кнопку "наверх"
+document.querySelector('.scroll-to-top').addEventListener("click", function () {
+   scrollToTop();
+});
+function scrollToTop() {
+   document.body.scrollTop = 0;
+   document.documentElement.scrollTop = 0;
+}

@@ -59,6 +59,10 @@ img {
   vertical-align: top;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
 }
@@ -130,6 +134,25 @@ main {
     right: -100%;
   }
 }
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.8;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
 .header {
   position: relative;
   z-index: 10;
