@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="../../style/lightgallery.css" />
+   <link type="text/css" rel="stylesheet" href="../../style/lg-zoom.css" />
+   <link type="text/css" rel="stylesheet" href="../../style/lg-thumbnail.css" />
+   <link rel="stylesheet" href="../../style/style.css">
+   <title>Методы терапии в центре Алексея Назарова</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="header">
+         <div class="header__body container">
+            <div class="header__logo">
+               <a href="https://doktornazarov.uz/"><img src="../../images/logo.png" alt="logo" ../../a>
+            </div>
+            <div class="header__menu menu">
+               <div class="menu__icon">
+                  <span></span>
+               </div>
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="https://doktornazarov.uz/" class="menu__link">Главная</a></li>
+
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu1', 'arrow1')">Методы
+                           терапии
+                           <span class="arrow" id="arrow1">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu1">
+                           <li><a href="../../metody/biorezonansnaya-diagnostika.html"
+                                 class="submenu__link">Биорезонансная
+                                 <br>
+                                 рефлексодиагностика</a></li>
+                           <li><a href="../../metody/manualnaya-terapiya.html" class="submenu__link">Мануальная
+                                 терапия</a>
+                           </li>
+                           <li><a href="../../metody/trakcionnaya-terapiya.html" class="submenu__link">Тракционная
+                                 терапия</a>
+                           </li>
+                           <li><a href="../../metody/" class="submenu__link">Все методы</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="../../price/" class="menu__link">Прайс-лист</a></li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu3', 'arrow3')">О нас
+                           <span class="arrow" id="arrow3">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu3">
+                           <li><a href="../../o-nas/" class="submenu__link">О центре</a></li>
+                           <li><a href="../../o-nas/vrachi.html" class="submenu__link">Врачи</a></li>
+                           <li><a href="../../o-nas/kontakty.html" class="submenu__link">Контакты</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu__item-with-submenu">
+                        <a href="" class="menu__link" onclick="toggleSubmenu(event, 'submenu2', 'arrow2')">Пресс-центр
+                           <span class="arrow" id="arrow2">
+                              <svg width="15px" height="15px" viewBox="0 0 5 9">
+                                 <path
+                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                              </svg>
+                           </span>
+                        </a>
+                        <ul class="submenu" id="submenu2">
+                           <li><a href="../index.html" class="submenu__link">Пресса о нас</a></li>
+                           <li><a href="../article.html" class="submenu__link">Статьи</a></li>
+                           <li><a href="../gallery.html" class="submenu__link">Фотогалерея</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+
+            </div>
+            <div class="header__buttons buttons-header">
+               <div class="buttons-header__tel">
+                  <a href="tel:+998712861001">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                     </svg>
+                     +998 71 286 10 01
+                  </a>
+               </div>
+               <div class="buttons-header__btn">
+                  <a href="tel:+998712861001">Записаться <span class="plus-icon">+</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <main class="main">
+         <ul class="breadcrumbs">
+            <li><a href="https://doktornazarov.uz/">Главная</a></li>
+            <svg width="8px" height="8px" viewBox="0 0 5 9" fill="blue">
+               <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+               </path>
+            </svg>
+            <li><a href="../index.html">Пресс-центр</a></li>
+            <svg width="8px" height="8px" viewBox="0 0 5 9" fill="blue">
+               <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+               </path>
+            </svg>
+            <li><a href="../gallery.html">Галерея</a></li>
+            <svg width="8px" height="8px" viewBox="0 0 5 9" fill="blue">
+               <path d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+               </path>
+            </svg>
+            <li>Аник сегодня</li>
+         </ul>
+         <div class="gallery-content">
+            <div class="gallery-content__body container">
+               <div class="gallery-content__title">
+                  <h2>Фотоархив</h2>
+               </div>
+               <div id="lightgallery" class="lightgallery-photo">
+                  <a href="../../images/anik-today/1.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                  </a>
+                  <a href="../../images/anik-today/2.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/1.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                  </a>
+                  <a href="../../images/anik-today/2.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/1.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                  </a>
+                  <a href="../../images/anik-today/2.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/1.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                  </a>
+                  <a href="../../images/anik-today/2.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+                  <a href="../../images/anik-today/1.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_1.png" />
+                  </a>
+                  <a href="../../images/anik-today/2.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_2.png" />
+                  </a>
+                  <a href="../../images/anik-today/3.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_3.png" />
+                  </a>
+                  <a href="../../images/anik-today/4.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_4.png" />
+                  </a>
+                  <a href="../../images/anik-today/5.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_5.png" />
+                  </a>
+                  <a href="../../images/anik-today/6.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_6.png" />
+                  </a>
+                  <a href="../../images/anik-today/7.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_7.png" />
+                  </a>
+                  <a href="../../images/anik-today/8.png" class="gallery-item">
+                     <img alt="" src="../../images/anik-today/thumbs_8.png" />
+                  </a>
+               </div>
+            </div>
+            <div class="pagination-buttons">
+               <button id="prevPage"><svg width="15px" height="15px" viewBox="0 0 5 9">
+                     <path
+                        d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+                     </path>
+                  </svg><span>Предыдущая страница</span> </button>
+               <button id="nextPage"><span>Следующая страница</span> <svg width="15px" height="15px" viewBox="0 0 5 9">
+                     <path
+                        d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+                     </path>
+                  </svg></button>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer-main">
+            <div class="footer-main__body container">
+               <div class="footer-main__menu">
+                  <div class="footer-main__title title">
+                     <h4>Меню</h4>
+                  </div>
+                  <ul class="footer-main__list">
+                     <li><a href="https://doktornazarov.uz/" class="footer-main__link">Главная</a></li>
+                     <li><a href="../../metody/" class="footer-main__link">Методы терапии</a></li>
+                     <li><a href="../../price/" class="footer-main__link">Прайс лист</a></li>
+                     <li><a href="../../o-nas/" class="footer-main__link">О центре</a></li>
+                     <li><a href="../../o-nas/vrachi.html" class="footer-main__link">Врачи</a></li>
+                     <li><a href="../index.html" class="footer-main__link">СМИ о нас</a></li>
+                     <li><a href="../article.html" class="footer-main__link">Статьи</a></li>
+                     <li><a href="../gallery.html" class="footer-main__link">Фотогалерея</a></li>
+                     <li><a href="../../o-nas/kontakty.html" class="footer-main__link">Контакты</a></li>
+                  </ul>
+               </div>
+               <div class="footer-main__address">
+                  <div class="footer-main__title title">
+                     <h4>Контакты</h4>
+                  </div>
+                  <p><img src="../../images/footer/location.png" alt="loc">
+                     <a href="https://maps.app.goo.gl/RYMgai4ynujJz3VBA" target="_blank">г. Ташкент, Мирзо-Улугбекский
+                        район
+                        100052, ул. Катта Дархон, дом 5 <br>
+                        Остановка «Дархон-3» (бывшая «Новомосковская») — Автобусы № 2, 58, 83, 88</a>
+                  </p>
+                  <p><img src="../../images/footer/telephone-2.png" alt="tel">
+                     <a href="tel:+998712861001">+998 71 286 10 01</a>
+                  </p>
+                  <p><img src="../../images/footer/mail.png" alt="mail"><a
+                        href="mailto:centr.nazarova@mail.ru">centr.nazarova@mail.ru</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div class="footer-bottom__body container">
+               <div class="footer-bottom__left">
+                  Сайт медицинского центра Алексея Назарова
+               </div>
+               <div class="footer-bottom__logo">
+                  <img src="../../images/logo.png" alt="logo">
+               </div>
+               <div class="footer-bottom__right">
+                  © АНИК 2023. All Rights Reserved
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="../../js/lightgallery.min.js"></script>
+   <script src="../../js/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+   <script src="../../js/plugins/zoom/lg-zoom.umd.js"></script>
+   <script src="../../js/script.js"></script>
+</body>
+
+</html>

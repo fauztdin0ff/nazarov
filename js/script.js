@@ -183,3 +183,72 @@ function nextPage() {
    // Например: if (currentPage < maxPages) { ... }
    showPage(currentPage + 1);
 }
+
+/*--------------------------------------------Photo gallery---------------------------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+   const galleries = document.querySelectorAll('.lightgallery-photo');
+
+   // Проверяем, есть ли галереи на странице
+   if (galleries.length > 0) {
+      galleries.forEach(function (gallery) {
+         lightGallery(gallery, {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            download: false,
+            closeOnTap: true,
+            loop: false,
+            hideControlOnEnd: true,
+            alignThumbnails: 'middle',
+            mobileSettings: {
+               controls: true,
+               showCloseIcon: true,
+               download: false
+            }
+         });
+      });
+   } else {
+   }
+
+});
+
+/*--------------------------------------------Пагинация галерея---------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+   const gallery = document.querySelector('.lightgallery-photo');
+   if (gallery) {
+      const galleryItems = gallery.querySelectorAll('.gallery-item');
+      const itemsPerPage = 45;
+      let currentPage = 1;
+
+      function showPage(page) {
+         const startIndex = (page - 1) * itemsPerPage;
+         const endIndex = startIndex + itemsPerPage;
+
+         galleryItems.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+               item.style.display = 'block';
+            } else {
+               item.style.display = 'none';
+            }
+         });
+      }
+
+      // Показать первую страницу при загрузке
+      showPage(currentPage);
+
+      // Обработчики событий для кнопок предыдущей и следующей страницы
+      document.getElementById('prevPage').addEventListener('click', function () {
+         if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+         }
+      });
+
+      document.getElementById('nextPage').addEventListener('click', function () {
+         const maxPage = Math.ceil(galleryItems.length / itemsPerPage);
+         if (currentPage < maxPage) {
+            currentPage++;
+            showPage(currentPage);
+         }
+      });
+   }
+});
