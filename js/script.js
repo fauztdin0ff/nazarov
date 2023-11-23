@@ -19,6 +19,52 @@ document.addEventListener('click', (event) => {
    }
 });
 
+/*--------------------------------------------preloader и анимация текста---------------------------------------------*/
+// Функция для скрытия прелоадера с задержкой
+function hidePreloaderWithDelay() {
+   const preloader = document.querySelector('.preloader');
+   const body = document.querySelector('body');
+
+   // Установка overflow: hidden на body при отображенном прелоадере
+   if (preloader.style.display !== 'none') {
+      body.style.overflow = 'hidden';
+   }
+
+   setTimeout(() => {
+      preloader.style.display = 'none';
+      body.style.overflow = 'auto'; // Возврат overflow: auto после скрытия прелоадера
+      animateText(); // Вызов анимации текста после скрытия прелоадера
+   }, 800); // Задержка в 2000 миллисекунд (2 секунды)
+}
+
+// Функция для анимации текста
+function animateText() {
+   if (window.innerWidth > 767) {
+      let text = document.getElementById('text');
+
+      if (text) {
+         let originalText = text.innerHTML;
+         text.innerHTML = '';
+
+         function typeText(index) {
+            text.innerHTML = originalText.substr(0, index);
+            if (index < originalText.length) {
+               setTimeout(function () {
+                  typeText(index + 1);
+               }, 100); // Скорость печати (в миллисекундах)
+            }
+         }
+
+         typeText(0);
+      }
+   }
+}
+
+// Вызов функции для скрытия прелоадера с задержкой после загрузки страницы
+window.addEventListener('load', hidePreloaderWithDelay);
+
+
+
 //-----------------ПЕРЕНОС БЛОКА КНОПОК---------------------------
 // Получаем ссылки на элементы
 var headerButtons = document.querySelector('.header__buttons');
@@ -81,31 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
    } else {
    }
 
-});
-
-/*--------------------------------------------Animation text---------------------------------------------*/
-document.addEventListener('DOMContentLoaded', function () {
-   if (window.innerWidth > 767) {
-      setTimeout(function () {
-         let text = document.getElementById('text');
-
-         if (text) {
-            let originalText = text.innerHTML;
-            text.innerHTML = '';
-
-            function typeText(index) {
-               text.innerHTML = originalText.substr(0, index);
-               if (index < originalText.length) {
-                  setTimeout(function () {
-                     typeText(index + 1);
-                  }, 100); // Скорость печати (в миллисекундах)
-               }
-            }
-
-            typeText(0);
-         }
-      }, 1000); // Задержка в 1 секунду перед запуском
-   }
 });
 
 //-------------------------------Прелоадер и плавное появление блоков---------------------------------
