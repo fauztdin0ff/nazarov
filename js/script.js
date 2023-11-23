@@ -26,6 +26,8 @@ var headerButtons = document.querySelector('.header__buttons');
 // Функция для перемещения кнопок внутрь блока menu__body
 function moveButtons() {
    menuBody.appendChild(headerButtons);
+   headerButtons.style.opacity = '1';
+   headerButtons.style.visibility = 'visible';
 }
 
 // Проверяем ширину экрана и вызываем функцию при необходимости

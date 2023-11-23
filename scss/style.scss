@@ -254,6 +254,9 @@ main {
 		white-space: nowrap;
 		&.active {
 			color: $blue;
+			svg {
+				fill: $blue;
+			}
 		}
 		&:hover {
 			color: $blue;
@@ -443,6 +446,8 @@ main {
 		& {
 			display: block;
 			margin-top: 90px;
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 }

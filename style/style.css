@@ -274,6 +274,9 @@ main {
 .menu__link.active {
   color: #4169e1;
 }
+.menu__link.active svg {
+  fill: #4169e1;
+}
 .menu__link:hover {
   color: #4169e1;
 }
@@ -483,6 +486,8 @@ main {
   .buttons-header {
     display: block;
     margin-top: 90px;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
