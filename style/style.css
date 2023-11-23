@@ -1265,7 +1265,9 @@ main {
 }
 .services__blocks {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 @media (max-width: 900px) {
   .services__blocks {
@@ -1274,7 +1276,7 @@ main {
   }
 }
 .services__block {
-  flex: 0 1 30%;
+  flex: 0 1 48%;
   position: relative;
 }
 

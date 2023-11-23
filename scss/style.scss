@@ -1106,7 +1106,9 @@ main {
 
 	&__blocks {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
 		@media (max-width: 900px) {
 			& {
 				flex-direction: column;
@@ -1116,7 +1118,7 @@ main {
 	}
 
 	&__block {
-		flex: 0 1 30%;
+		flex: 0 1 48%;
 		position: relative;
 	}
 }
