@@ -1185,6 +1185,12 @@ main {
 		justify-content: center;
 		align-items: center;
 		border-radius: 0px 0px 30px 30px;
+		@media (max-width: 465px) {
+			& {
+				flex-direction: column-reverse;
+				gap: 15px;
+			}
+		}
 		.blue-button {
 			flex: 0 1 60%;
 			@media (max-width: 767px) {

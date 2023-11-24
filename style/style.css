@@ -1350,6 +1350,12 @@ main {
   align-items: center;
   border-radius: 0px 0px 30px 30px;
 }
+@media (max-width: 465px) {
+  .block-service__buttons {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}
 .block-service__buttons .blue-button {
   flex: 0 1 60%;
 }
