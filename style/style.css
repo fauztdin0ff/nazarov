@@ -1884,10 +1884,8 @@ footer a:hover {
 .footer-bottom__body > * {
   flex: 0 1 33.3%;
 }
-@media (max-width: 767px) {
-  .footer-bottom__logo {
-    display: none;
-  }
+.footer-bottom__logo {
+  display: none;
 }
 
 /*--------------------------------------------SERVICES PAGE---------------------------------------------*/
@@ -3249,6 +3247,12 @@ footer a:hover {
     font-size: calc(14px + 2 * ((100vw - 320px) / 880));
   }
 }
+@media (max-width: 600px) {
+  .person-about__text p {
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+}
 .person-about__share {
   display: inline-flex;
   align-items: center;
@@ -3292,6 +3296,7 @@ footer a:hover {
 @media (max-width: 600px) {
   .advantages {
     flex-direction: column;
+    padding: 30px 10px;
   }
 }
 .advantages__left {
@@ -3375,6 +3380,9 @@ footer a:hover {
     font-size: calc(18px + 9 * ((100vw - 320px) / 880));
   }
 }
+.rightbar__title:not(:first-child) {
+  margin-top: 50px;
+}
 .rightbar a {
   display: flex;
   align-items: center;
@@ -3382,6 +3390,9 @@ footer a:hover {
   margin-bottom: 16px;
   padding: 5px;
   color: #243238;
+}
+.rightbar a:hover {
+  color: #4169e1;
 }
 .rightbar a img {
   max-width: 100%;

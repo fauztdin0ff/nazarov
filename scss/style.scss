@@ -1688,11 +1688,7 @@ footer {
 		}
 	}
 	&__logo {
-		@media (max-width: 767px) {
-			& {
-				display: none;
-			}
-		}
+		display: none;
 	}
 }
 
@@ -3026,8 +3022,12 @@ footer {
 			letter-spacing: 0.32px;
 			@include adaptiv-value("font-size", 16, 14, 1);
 			margin-bottom: 15px;
-		}
-		p:not(:last-child) {
+			@media (max-width: 600px) {
+				& {
+					flex-direction: column;
+					padding: 0px 10px;
+				}
+			}
 		}
 	}
 
@@ -3077,6 +3077,7 @@ footer {
 	@media (max-width: 600px) {
 		& {
 			flex-direction: column;
+			padding: 30px 10px;
 		}
 	}
 	&__left {
@@ -3152,6 +3153,9 @@ footer {
 		color: $darkGrey;
 		margin-bottom: 24px;
 	}
+	&__title:not(:first-child) {
+		margin-top: 50px;
+	}
 	a {
 		display: flex;
 		align-items: center;
@@ -3159,6 +3163,9 @@ footer {
 		margin-bottom: 16px;
 		padding: 5px;
 		color: $darkGrey;
+		&:hover {
+			color: $blue;
+		}
 		img {
 			max-width: 100%;
 		}

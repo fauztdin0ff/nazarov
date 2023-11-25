@@ -20,21 +20,23 @@ document.addEventListener('click', (event) => {
 });
 
 /*--------------------------------------------preloader и анимация текста---------------------------------------------*/
-// Функция для скрытия прелоадера с задержкой
 function hidePreloaderWithDelay() {
    const preloader = document.querySelector('.preloader');
    const body = document.querySelector('body');
 
-   // Установка overflow: hidden на body при отображенном прелоадере
-   if (preloader.style.display !== 'none') {
-      body.style.overflow = 'hidden';
-   }
+   if (preloader) {
+      if (preloader.style.display !== 'none') {
+         body.style.overflow = 'hidden';
+      }
 
-   setTimeout(() => {
-      preloader.style.display = 'none';
-      body.style.overflow = 'auto'; // Возврат overflow: auto после скрытия прелоадера
-      animateText(); // Вызов анимации текста после скрытия прелоадера
-   }, 800); // Задержка в 2000 миллисекунд (2 секунды)
+      setTimeout(() => {
+         preloader.style.display = 'none';
+         body.style.overflow = 'auto';
+         animateText();
+      }, 800);
+   } else {
+      animateText(); // Если нет прелоадера, просто запускаем анимацию текста
+   }
 }
 
 // Функция для анимации текста
@@ -62,8 +64,6 @@ function animateText() {
 
 // Вызов функции для скрытия прелоадера с задержкой после загрузки страницы
 window.addEventListener('load', hidePreloaderWithDelay);
-
-
 
 //-----------------ПЕРЕНОС БЛОКА КНОПОК---------------------------
 // Получаем ссылки на элементы
