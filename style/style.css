@@ -873,30 +873,38 @@ main {
   z-index: 1;
   display: flex;
   justify-content: center;
+  border-radius: 30px;
+  overflow: hidden;
 }
 .home__image img {
-  max-width: 90%;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 475px) {
+  .home__image img {
+    transform: translateY(20px);
+  }
 }
 @media (max-width: 800px) {
   .home__image {
     margin-top: 50px;
   }
-  .home__image img {
-    max-width: 100%;
-  }
 }
 
 .image-info {
   position: absolute;
-  bottom: 0;
-  top: 100px;
+  top: 50px;
   left: 0;
 }
 @media (max-width: 1200px) {
   .image-info {
-    top: calc(50px + 50 * ((100vw - 320px) / 880));
+    top: calc(0px + 50 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 475px) {
+  .image-info {
+    top: 0px;
   }
 }
 .image-info.element-animation {
@@ -943,20 +951,19 @@ main {
 .image-info__block:first-child {
   margin-bottom: 20px;
 }
+@media (max-width: 475px) {
+  .image-info__block:first-child {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 800px) {
   .image-info {
     left: 40px;
-    top: 60px;
   }
 }
 @media (max-width: 800px) and (max-width: 1200px) {
   .image-info {
     left: calc(0px + 40 * ((100vw - 320px) / 880));
-  }
-}
-@media (max-width: 800px) and (max-width: 1200px) {
-  .image-info {
-    top: calc(30px + 30 * ((100vw - 320px) / 880));
   }
 }
 
@@ -3156,6 +3163,11 @@ footer a:hover {
   display: flex;
   gap: 30px;
 }
+@media (min-width: 900px) {
+  .team-about__body {
+    align-items: start;
+  }
+}
 @media (max-width: 900px) {
   .team-about__body {
     flex-direction: column;
@@ -3181,11 +3193,12 @@ footer a:hover {
   }
 }
 .person-about__image {
-  flex: 0 1 40%;
-  margin-top: -50px;
+  flex: 0 1 50%;
 }
 .person-about__image img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 600px) {
   .person-about__image {
@@ -3199,7 +3212,12 @@ footer a:hover {
   }
 }
 .person-about__info {
-  flex: 0 1 60%;
+  flex: 0 1 50%;
+}
+@media (min-width: 769px) {
+  .person-about__info {
+    padding-top: 50px;
+  }
 }
 .person-about__title h1 {
   color: #243238;
@@ -3333,6 +3351,10 @@ footer a:hover {
   line-height: 150%;
   letter-spacing: 0.32px;
   margin-bottom: 8px;
+}
+.advantages__name span {
+  color: #4169e1;
+  font-weight: 700;
 }
 .advantages__right {
   flex: 0 1 40%;

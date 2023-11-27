@@ -760,25 +760,35 @@ main {
 		z-index: 1;
 		display: flex;
 		justify-content: center;
+		border-radius: 30px;
+		overflow: hidden;
+
 		img {
-			max-width: 90%;
+			max-width: 100%;
 			object-fit: contain;
+
+			@media (max-width: 475px) {
+				& {
+					transform: translateY(20px);
+				}
+			}
 		}
 		@media (max-width: 800px) {
 			& {
 				margin-top: 50px;
-				img {
-					max-width: 100%;
-				}
 			}
 		}
 	}
 }
 .image-info {
 	position: absolute;
-	bottom: 0;
-	@include adaptiv-value("top", 100, 50, 1);
+	@include adaptiv-value("top", 50, 0, 1);
 	left: 0;
+	@media (max-width: 475px) {
+		& {
+			top: 0px;
+		}
+	}
 	&.element-animation {
 		transition: all 0.3s linear 0.4s;
 		opacity: 0;
@@ -811,11 +821,15 @@ main {
 	}
 	&__block:first-child {
 		margin-bottom: 20px;
+		@media (max-width: 475px) {
+			& {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	@media (max-width: 800px) {
 		& {
 			@include adaptiv-value("left", 40, 0, 1);
-			@include adaptiv-value("top", 60, 30, 1);
 		}
 	}
 }
@@ -2932,6 +2946,11 @@ footer {
 	&__body {
 		display: flex;
 		gap: 30px;
+		@media (min-width: 900px) {
+			& {
+				align-items: start;
+			}
+		}
 		@media (max-width: 900px) {
 			& {
 				flex-direction: column;
@@ -2965,10 +2984,10 @@ footer {
 		}
 	}
 	&__image {
-		flex: 0 1 40%;
-		margin-top: -50px;
+		flex: 0 1 50%;
 		img {
 			width: 100%;
+			object-fit: contain;
 		}
 		@media (max-width: 600px) {
 			& {
@@ -2984,7 +3003,12 @@ footer {
 	}
 
 	&__info {
-		flex: 0 1 60%;
+		flex: 0 1 50%;
+		@media (min-width: 769px) {
+			& {
+				padding-top: 50px;
+			}
+		}
 	}
 
 	&__title {
@@ -3109,6 +3133,11 @@ footer {
 		line-height: 150%;
 		letter-spacing: 0.32px;
 		margin-bottom: 8px;
+
+		span {
+			color: $blue;
+			font-weight: 700;
+		}
 	}
 
 	&__text {
