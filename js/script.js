@@ -301,3 +301,24 @@ function scrollToTop() {
    document.body.scrollTop = 0;
    document.documentElement.scrollTop = 0;
 }
+
+function shareOnFacebook() {
+   // URL, который вы хотите поделиться
+   var urlToShare = 'https://doctornazarov.uz/';
+
+   // Открываем окно шаринга Facebook
+   window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(urlToShare), 'Поделиться на Facebook', 'width=600,height=400');
+}
+function shareOnTwitter() {
+   // Текст для твита
+   var tweetText = 'Здесь ваш текст для твита';
+
+   // URL, который вы хотите поделиться
+   var urlToShare = 'https://example.com/page-to-share';
+
+   // Формируем URL для шаринга на Twitter
+   var twitterShareUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText) + '&url=' + encodeURIComponent(urlToShare);
+
+   // Открываем окно шаринга Twitter
+   window.open(twitterShareUrl, 'Поделиться на Twitter', 'width=600,height=400');
+}

@@ -1425,6 +1425,55 @@ main {
 .team__block {
   flex: 0 1 20%;
   color: #243238;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 0;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 1000px) {
+  .team__block:before {
+    content: "подробнее";
+    display: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    color: #4169e1;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+  }
+  .team__block:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9bb3fb;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+  }
+  .team__block:hover::before {
+    display: flex;
+  }
+  .team__block:hover::after {
+    scale: 5;
+    transform: none;
+    -webkit-animation: radius 0.3s ease 0s forwards;
+            animation: radius 0.3s ease 0s forwards;
+  }
 }
 @media (max-width: 650px) {
   .team__block {
@@ -1439,6 +1488,15 @@ main {
   display: inline-block;
 }
 
+.block-team {
+  padding: 10px;
+}
+.block-team:hover .block-team__name {
+  color: #fff;
+}
+.block-team:hover .block-team__profession {
+  color: rgb(223, 223, 223);
+}
 .block-team__photo {
   margin-bottom: 25px;
 }
@@ -1473,6 +1531,11 @@ main {
   font-size: 16px;
   letter-spacing: 0.32px;
   color: #7a7f85;
+}
+@media (max-width: 1200px) {
+  .block-team__profession {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 880));
+  }
 }
 
 /*--------------------------------------------HOME CONTACT---------------------------------------------*/
@@ -2505,17 +2568,72 @@ footer a:hover {
 }
 .team-page__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 @media (max-width: 600px) {
   .team-page__cards {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
+    gap: 20px;
   }
 }
 .card-team-page {
   text-align: center;
+  position: relative;
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease 0s;
+  z-index: 0;
+  overflow: hidden;
+}
+@media (min-width: 1000px) {
+  .card-team-page:before {
+    content: "подробнее";
+    display: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    color: #4169e1;
+    transition: all 0.3s ease 0s;
+  }
+  .card-team-page:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9bb3fb;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+  }
+  .card-team-page:hover::after {
+    scale: 5;
+    transform: none;
+    -webkit-animation: radius 0.3s ease 0s forwards;
+            animation: radius 0.3s ease 0s forwards;
+  }
+  .card-team-page:hover::before {
+    display: flex;
+  }
+  .card-team-page:hover .card-team-page__name {
+    color: #fff;
+  }
+  .card-team-page:hover .card-team-page__special {
+    color: rgb(226, 226, 226);
+  }
 }
 .card-team-page__image {
   margin-bottom: 20px;
@@ -2529,6 +2647,8 @@ footer a:hover {
   white-space: nowrap;
   line-height: 120%;
   letter-spacing: -0.27px;
+  color: #243238;
+  font-weight: 700;
 }
 @media (max-width: 1200px) {
   .card-team-page__name {
@@ -2547,6 +2667,23 @@ footer a:hover {
   }
 }
 
+@-webkit-keyframes radius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 15px;
+  }
+}
+
+@keyframes radius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 15px;
+  }
+}
 .schedule {
   background: url("../images/team/bg.png") center/cover no-repeat;
   padding: 40px 0;
@@ -3318,7 +3455,7 @@ footer a:hover {
   }
 }
 .advantages__left {
-  flex: 0 1 60%;
+  flex: 1 1 auto;
 }
 .advantages__title {
   font-weight: 500;
@@ -3355,27 +3492,6 @@ footer a:hover {
 .advantages__name span {
   color: #4169e1;
   font-weight: 700;
-}
-.advantages__right {
-  flex: 0 1 40%;
-}
-.advantages__right li {
-  position: relative;
-  padding-left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 150%;
-  letter-spacing: 0.32px;
-  color: #7a7f85;
-  margin-bottom: 16px;
-}
-.advantages__right li:before {
-  content: url("../images/icons/check-lg.svg");
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(2px);
 }
 
 .rightbar {
