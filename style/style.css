@@ -773,6 +773,7 @@ main {
 .home__body {
   padding: 40px 0;
   display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 800px) {
   .home__body {
@@ -868,7 +869,7 @@ main {
   }
 }
 .home__image {
-  flex: 0 1 50%;
+  flex: 0 1 45%;
   position: relative;
   z-index: 1;
   display: flex;
@@ -1491,11 +1492,13 @@ main {
 .block-team {
   padding: 10px;
 }
-.block-team:hover .block-team__name {
-  color: #fff;
-}
-.block-team:hover .block-team__profession {
-  color: rgb(223, 223, 223);
+@media (min-width: 1000px) {
+  .block-team:hover .block-team__name {
+    color: #fff;
+  }
+  .block-team:hover .block-team__profession {
+    color: rgb(223, 223, 223);
+  }
 }
 .block-team__photo {
   margin-bottom: 25px;

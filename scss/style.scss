@@ -671,6 +671,7 @@ main {
 	&__body {
 		padding: 40px 0;
 		display: flex;
+		justify-content: space-between;
 		@media (max-width: 800px) {
 			& {
 				flex-direction: column;
@@ -753,7 +754,7 @@ main {
 	}
 
 	&__image {
-		flex: 0 1 50%;
+		flex: 0 1 45%;
 		position: relative;
 		z-index: 1;
 		display: flex;
@@ -1329,11 +1330,13 @@ main {
 }
 .block-team {
 	padding: 10px;
-	&:hover &__name {
-		color: #fff;
-	}
-	&:hover &__profession {
-		color: rgb(223, 223, 223);
+	@media (min-width: 1000px) {
+		&:hover &__name {
+			color: #fff;
+		}
+		&:hover &__profession {
+			color: rgb(223, 223, 223);
+		}
 	}
 	&__photo {
 		margin-bottom: 25px;
