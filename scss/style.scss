@@ -954,7 +954,7 @@ main {
 	}
 	&__body {
 		display: flex;
-		align-items: center;
+		align-items: end;
 		position: relative;
 		@media (max-width: 920px) {
 			& {
@@ -1058,6 +1058,7 @@ main {
 
 	&__image {
 		flex: 0 1 50%;
+		padding-bottom: 7px;
 		img {
 			max-width: 100%;
 			border-radius: 30px;
