@@ -340,23 +340,27 @@ main {
 		font-weight: 500;
 		transition: all 0.3s ease 0s;
 		white-space: nowrap;
-		&.active {
-			color: $blue;
-			svg {
-				fill: $blue;
+
+		@media (min-width: 769px) {
+			&.active {
+				color: $blue;
+				svg {
+					fill: $blue;
+				}
 			}
-		}
-		&:hover {
-			color: $blue;
-		}
-		&:hover svg {
-			fill: $blue;
-			@media (max-width: 767px) {
-				& {
-					fill: #fff;
+			&:hover {
+				color: $blue;
+			}
+			&:hover svg {
+				fill: $blue;
+				@media (max-width: 767px) {
+					& {
+						fill: #fff;
+					}
 				}
 			}
 		}
+
 		.arrow {
 			display: inline-block;
 			transform: rotate(90deg) translateX(2px);

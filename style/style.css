@@ -399,19 +399,21 @@ main {
   transition: all 0.3s ease 0s;
   white-space: nowrap;
 }
-.menu__link.active {
-  color: #4169e1;
+@media (min-width: 769px) {
+  .menu__link.active {
+    color: #4169e1;
+  }
+  .menu__link.active svg {
+    fill: #4169e1;
+  }
+  .menu__link:hover {
+    color: #4169e1;
+  }
+  .menu__link:hover svg {
+    fill: #4169e1;
+  }
 }
-.menu__link.active svg {
-  fill: #4169e1;
-}
-.menu__link:hover {
-  color: #4169e1;
-}
-.menu__link:hover svg {
-  fill: #4169e1;
-}
-@media (max-width: 767px) {
+@media (min-width: 769px) and (max-width: 767px) {
   .menu__link:hover svg {
     fill: #fff;
   }
