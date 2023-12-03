@@ -1575,7 +1575,11 @@ main {
 	&__image {
 		img {
 			max-width: 100%;
+			width: 100%;
 			border-radius: 30px;
+			object-fit: contain;
+			object-position: top;
+			@include adaptiv-value("min-height", 350, 170, 1);
 		}
 	}
 	&__date {

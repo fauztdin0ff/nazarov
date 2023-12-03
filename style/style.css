@@ -1768,7 +1768,18 @@ main {
 }
 .block-news__image img {
   max-width: 100%;
+  width: 100%;
   border-radius: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+  min-height: 350px;
+}
+@media (max-width: 1200px) {
+  .block-news__image img {
+    min-height: calc(170px + 180 * ((100vw - 320px) / 880));
+  }
 }
 .block-news__date {
   display: inline-block;
