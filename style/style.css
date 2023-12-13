@@ -871,13 +871,11 @@ main {
   }
 }
 .home__image {
-  flex: 0 1 45%;
+  flex: 0 1 40%;
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
-  border-radius: 30px;
-  overflow: hidden;
 }
 .home__image img {
   max-width: 100%;
@@ -897,17 +895,12 @@ main {
 
 .image-info {
   position: absolute;
-  top: 50px;
-  left: 0;
+  bottom: 60px;
+  left: -100px;
 }
 @media (max-width: 1200px) {
   .image-info {
-    top: calc(0px + 50 * ((100vw - 320px) / 880));
-  }
-}
-@media (max-width: 475px) {
-  .image-info {
-    top: 0px;
+    bottom: calc(10px + 50 * ((100vw - 320px) / 880));
   }
 }
 .image-info.element-animation {
@@ -932,7 +925,7 @@ main {
 }
 @media (max-width: 1200px) {
   .image-info__block {
-    padding: calc(8px + 16 * ((100vw - 320px) / 880));
+    padding: calc(18px + 6 * ((100vw - 320px) / 880));
   }
 }
 .image-info__block p {
@@ -2262,6 +2255,9 @@ footer a:hover {
 .sidebar__today p {
   margin-bottom: 20px;
 }
+.sidebar__gallery a {
+  max-height: 150px;
+}
 .sidebar__gallery img {
   border-radius: 10px;
   width: 100%;
@@ -2744,7 +2740,7 @@ footer a:hover {
 .schedule__list td {
   text-align: center;
   padding: 13px;
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 1200px) {
   .schedule__list th,
@@ -2755,7 +2751,7 @@ footer a:hover {
 @media (max-width: 1200px) {
   .schedule__list th,
 .schedule__list td {
-    font-size: calc(12px + 4 * ((100vw - 320px) / 880));
+    font-size: calc(15px + 3 * ((100vw - 320px) / 880));
   }
 }
 
@@ -3194,7 +3190,7 @@ footer a:hover {
 /*--------------------------------------------Gallery content---------------------------------------------*/
 .lightgallery-photo {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: repeat(4, 1fr);
   gap: 7px;
 }

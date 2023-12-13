@@ -758,14 +758,11 @@ main {
 	}
 
 	&__image {
-		flex: 0 1 45%;
+		flex: 0 1 40%;
 		position: relative;
 		z-index: 1;
 		display: flex;
 		justify-content: center;
-		border-radius: 30px;
-		overflow: hidden;
-
 		img {
 			max-width: 100%;
 			object-fit: contain;
@@ -785,13 +782,8 @@ main {
 }
 .image-info {
 	position: absolute;
-	@include adaptiv-value("top", 50, 0, 1);
-	left: 0;
-	@media (max-width: 475px) {
-		& {
-			top: 0px;
-		}
-	}
+	@include adaptiv-value("bottom", 60, 10, 1);
+	left: -100px;
 	&.element-animation {
 		transition: all 0.3s linear 0.4s;
 		opacity: 0;
@@ -806,7 +798,7 @@ main {
 		background: rgba(255, 255, 255, 0.3);
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
 		backdrop-filter: blur(25px);
-		@include adaptiv-value("padding", 24, 8, 1);
+		@include adaptiv-value("padding", 24, 18, 1);
 		display: flex;
 		align-items: center;
 		gap: 4px;
@@ -2070,6 +2062,9 @@ footer {
 	}
 
 	&__gallery {
+		a {
+			max-height: 150px;
+		}
 		img {
 			border-radius: 10px;
 			width: 100%;
@@ -2525,7 +2520,7 @@ footer {
 		td {
 			text-align: center;
 			@include adaptiv-value("padding", 13, 6, 1);
-			@include adaptiv-value("font-size", 16, 12, 1);
+			@include adaptiv-value("font-size", 18, 15, 1);
 		}
 	}
 }
@@ -2955,7 +2950,7 @@ footer {
 /*--------------------------------------------Gallery content---------------------------------------------*/
 .lightgallery-photo {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	grid-template-rows: repeat(4, 1fr);
 	gap: 7px;
 	a {
