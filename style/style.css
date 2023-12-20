@@ -832,6 +832,7 @@ main {
   .home__title {
     margin-bottom: 25px;
     margin-top: 15px;
+    line-height: 145%;
   }
 }
 .home__subtitle {
